@@ -29,16 +29,15 @@ html[data-theme="light"]{
   --hero-fluid-container-bg: #FFFFFF;
   --hero-fluid-container-border: #C6C6C8;
 
-  /* --hero-badge-bg-color: #111E30;   
-  --hero-badge-text-color: #3475B5;
-  --hero-badge-border-color: #294F7B;
-  --hero-badge-selection-color: #478CD1; */
 
 
     --hero-badge-bg-color: #EBF1F8;
   --hero-badge-text-color: #478CD1;
   --hero-badge-border-color: #A2C0DD;
   --hero-badge-selection-color: #3475B5;
+
+  
+
 
   /* hero buttons */
   --hero-btn-bg-color: #478CD1;     /* primary CTA blue */
@@ -213,38 +212,78 @@ html[data-theme="dark"]{
   background: #2563EB;
   color: #fff;
 }
+/* Gradient Heading */
+.hero-title.gradient-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;       /* large like reference */
+  font-weight: 800;      /* strong bold */
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  margin-bottom: 24px;   /* spacing from subtitle */
 
+  background: linear-gradient(90deg, #E2E8F0 0%, #818CF8 40%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+
+  
+}
+
+/* italic "Powered" */
+.italic-text {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* AI Star Fix */
 .ai-text {
-  position: relative;
+    background: linear-gradient(90deg, #E2E8F0 0%, #818CF8 40%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
   display: inline-block;
+  position: relative;
+
+
 }
 
 .i-letter {
+    background: linear-gradient(90deg, #E2E8F0 0%, #818CF8 40%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  left: auto;
   position: relative;
   display: inline-block;
-  font-family: inherit;
-}
-
-.ai-text {
-  position: relative;
-  display: inline-block;
-}
-
-.i-letter {
-  position: relative;
-  display: inline-block;
+  color: inherit; /* keeps gradient text visible */
 }
 
 .i-icon {
+
   position: absolute;
-  top: -14px;        /* moves icon above the I */
-  left: 50%;         /* center over the I */
+  top: -14px;          /* move star above I */
+  left: 50%;
   transform: translateX(-50%);
-  width: 16px;       /* adjust size */
+  width: 16px;
   height: 16px;
-  pointer-events: none; /* avoid accidental clicks */
+  pointer-events: none;
 }
 
+/* Subtitle paragraph */
+.hero-subtitle {
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+  margin-bottom: 40px;  /* more breathing room */
+  text-align: center;
+}
 
 
 /* ---------------- BASE / LAYOUT ---------------- */
@@ -305,16 +344,52 @@ button,
   background-color: #1f2937; /* adjust to your navbar color */
 
 /* Learn More button */
+/* Learn More button (Navbar) */
 .btn-learn {
-  background-color: #242426; /* same as navbar */
-  color: #fff;
-  border: 1px solid var(--Stroke-04, #4D4D53)
-  
+  background-color: transparent; /* stays transparent */
+  color: var(--nav-text-menu-color); /* adapts to theme text color */
+  border: 1px solid var(--btn-outline-border); /* adapts per theme */
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: none !important; /* disable transitions */
 }
+
+/* Disable hover/focus/active effect */
+.btn-learn:hover,
+.btn-learn:focus,
+.btn-learn:active {
+  background-color: transparent !important;
+  color: var(--nav-text-menu-color) !important;
+  border: 1px solid var(--btn-outline-border) !important;
+  box-shadow: none !important;
+}
+/* See How It Works button */
+.btn-work {
+  background-color: var(--hero-btn-work); 
+  color: var(--hero-btn-color);           
+  border: 1px solid var(--Stroke-04, #4D4D53);
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: none !important; /* disable hover/focus transitions */
+}
+
+/* Disable hover/focus/active effect */
+.btn-work:hover,
+.btn-work:focus,
+.btn-work:active {
+  background-color: var(--hero-btn-work) !important;
+  color: var(--hero-btn-color) !important;
+  border: 1px solid var(--Stroke-04, #D1D1D6) !important;
+  box-shadow: none !important;
+}
+
+
 .btn-work {
   background-color: var(--hero-btn-work); /* primary blue */
   color: var(--hero-btn-color);
-  border: ;
+  border: 1px solid var(#D1D1D6);
 
 }
 .hero-buttons {
@@ -409,17 +484,31 @@ margin-bottom: 32px;
   transition: none !important;
   pointer-events: none; /* disable hover interactions on logos */
 }
+/* ---------------- HOW IT WORKS ---------------- */
+.how-section {
+  padding: 80px 20px;
+  text-align: center;
+}
 
-/* ---------------- HOW SECTION ---------------- */
-.how-section { padding: 60px 20px;
-   background: transparent; 
-   text-align: center; }
-.how-section h2 { font-size: 2rem; 
+.how-section h2 {
+  font-size: 2rem;
   font-weight: 700;
-   margin-bottom: 12px; }
-.how-section p.subtitle { color: var(--muted); 
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.how-section p.subtitle {
+  color: var(--muted);
   max-width: 700px;
-   margin: 0 auto 40px; }
+  margin: 0 auto 48px;
+  font-size: 1rem;
+}
+
+.how-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
 
 .how-card {
   background: transparent;
@@ -427,9 +516,41 @@ margin-bottom: 32px;
   border-radius: 12px;
   padding: 30px 20px;
   text-align: center;
-  height: 100%;
+  color: var(--text-primary);
 }
-html[data-theme="dark"] .how-card { border-color: rgba(255,255,255,0.08); }
+
+html[data-theme="dark"] .how-card {
+  border-color: rgba(255,255,255,0.12);
+}
+
+.how-card .icon,
+.how-card .custom-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.how-card .time {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.how-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.how-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 
 /* ---------------- PRIOR AUTH ---------------- */
 .prior-auth-section {
@@ -458,6 +579,7 @@ html[data-theme="dark"] .how-card { border-color: rgba(255,255,255,0.08); }
   color: var(--text-primary);
 }
 /* ... keep your existing feature styles, but rely on variables above for colors ... */
+
 
 /* Footer Base */
 .site-footer {
