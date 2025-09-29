@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>InstantAuth</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet" />
+    <link href="src/css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                    <img id="siteLogo" src="src/img/logo-dark.svg" alt="InstantAuth Logo" height="32" class="me-2" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">How It Works</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-learn">Learn More</button>
+                        <button class="btn btn-primary">Start Free Trial</button>
+
+                        <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+                            <img id="toggleLogo" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16"
+                                width="16" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="pb-3">
+                    <span class="badge ">Secure. Automated. Intelligent.</span>
+                </div>
+                <h1 class="hero-title mb-4">
+                    <span class="ai-text">
+                        A<span class="i-letter">
+                            I
+                            <img src="src/img/ai-dark.svg" alt="AI Icon" class="i-icon" />
+                        </span>
+                    </span>
+                    -<span style="font-weight: 600; font-style: italic">Powered</span>
+                    Platform for Patient Intake,<br />
+                    Encounters & Prior Authorizations
+                </h1>
+
+                <p class="hero-subtitle">
+                    InstantAUTH modernizes patient flow with agentic AI automating intake,
+                    streamlining encounters,<br />
+                    predicting prior authorization and payment requirements, and maximizing
+                    revenue. Improve throughput,<br />
+                    reduce denials, and transform every patient interaction into a
+                    reimbursable encounter.
+                </p>
+                <div class="hero-buttons ">
+                    <a href="#how" class="btn btn-work">See How It Works</a>
+                    <a href="#trial" class="btn btn-primary">Start Free Trial</a>
+                </div>
+
+            </div>
+            <div class="row pt-5 ">
+                <p class="mb-4">Seamlessly integrates with leading EMRs.</p>
+                <div class="logos">
+                    <img src="src/img/epic-dark.svg" class="img-fluid" data-light="src/img/epic-light.svg"
+                        data-dark="src/img/epic-dark.svg" class="img-fluid" alt="Epic" />
+                    <img src="src/img/oracle-dark.png" class="img-fluid" data-light="src/img/oracle-light.png"
+                        data-dark="src/img/oracle-dark.svg" class="img-fluid" alt="Oracle Cerner" />
+                    <img src="src/img/allscript-dark.svg" class="img-fluid" data-light="src/img/allscript-light.svg"
+                        data-dark="src/img/allscript-dark.svg" class="img-fluid" alt="Allscripts" />
+                    <img src="src/img/athenahealth-dark.png" class="img-fluid" data-light="src/img/athenahealth-light.png"
+                        data-dark="src/img/athenahealth-dark.svg"class="img-fluid" alt="athenahealth" />
+                    <img src="src/img/advancedmd-dark.svg" class="img-fluid" data-light="src/img/advancedmd-light.svg"
+                        data-dark="src/img/advancedmd-dark.svg" alt="AdvancedMD" />
+                </div>
+            </div>  
+        </div>
+    </section>
+    <!-- END HERO -->
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+        <div class="container">
+            <h2>How InstantAuth Works</h2>
+            <p class="subtitle">
+                InstantAuth modernized patient care from the first phone call to the
+                office.
+            </p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-card">
+                        <i class="fas fa-file-medical"></i>
+                        <span class="time"><i class="far fa-clock"></i> &lt; 1 min</span>
+                        <h5>Agentic Intake</h5>
+                        <p>
+                            Patients speak with a virtual medical assistant who can gather
+                            pertinent medical history & insurance info.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-card">
+                        <i class="fas fa-magic"></i>
+                        <span class="time"><i class="far fa-clock"></i> 2 min</span>
+                        <h5>Intelligent Analysis</h5>
+                        <p>
+                            Agentic AI collects clinical history and compiles documentation
+                            tailored to payer requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-card">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="time"><i class="far fa-clock"></i> 5 min</span>
+                        <h5>Automated Prior Authorization</h5>
+                        <p>
+                            InstantAuth predicts which orders need PA and notifies
+                            clinicians of potential issues.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span class="time"><i class="far fa-clock"></i> 15 min</span>
+                        <h5>Instant Authorization</h5>
+                        <p>
+                            Approved authorizations flow back into your EMR — accelerating
+                            billing and reducing denials.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIOR AUTH SECTION -->
+    <section class="prior-auth-section">
+        <div class="prior-auth-content">
+            <small>Largely Automated Encounters | HIPAA-Compliant | CMS-Compliant</small>
+            <h2>
+                Automated Prior Authorization Forms – Faster, Accurate, Compliant
+            </h2>
+            <p>
+                InstantAuth streamlines prior authorization with auto-filled patient
+                and insurance details, reducing manual entry errors and accelerating
+                approvals.
+            </p>
+            <a href="#" class="btn btn-primary">Start Free Trial</a>
+            <small>*T&C apply</small>
+        </div>
+        <div>
+            <img id="framebox" src="src/img/frame-box-img.svg" alt="Form Mockup" class="form-mockup" />
+        </div>
+    </section>
+
+    <!-- FEATURES & BENEFITS -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title text-center">Features & Benefits</h2>
+            <p class="subtitle text-center">
+                From reducing paperwork to faster reimbursements, InstantAuth is built
+                to help practices save time, lower costs, and improve patient care.
+            </p>
+            <!-- Row 1 -->
+            <div class="row align-items-center feature-row">
+                <div class="col-md-6">
+                    <div class="">
+                        <img src="src/img/prior-automation-workflow.svg" class="img-fluid" alt="" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="badge feature-badge green">95% Reduction</span>
+                    <h3>AI-Powered Automation</h3>
+                    <p>
+                        Streamlined workflows for prior authorizations cut manual tasks by
+                        95%, boosting performance and reducing errors. Automation lets
+                        organizations focus on strategy, while smart systems enhance
+                        accuracy and speed up approvals, saving time and improving
+                        experiences for staff and clients.
+                    </p>
+                </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="row align-items-center feature-row flex-md-row-reverse">
+                <div class="col-md-6">
+                    <div class="feature-image"></div>
+                    <img src="/img/prior-automation-workflow.svg" class="img-fluid" alt="" />
+                </div>
+                <div class="col-md-6">
+                    <span class="badge feature-badge purple">Instant Updates</span>
+                    <h3>Real-Time Processing</h3>
+                    <p>
+                        Receive instant updates on authorization status with smart
+                        prioritization. Critical cases get immediate attention, while
+                        routine requests are automated, reducing wait times and ensuring
+                        efficient resource allocation for urgent and less urgent matters.
+                    </p>
+                </div>
+            </div>
+            <!-- Row 3 -->
+            <div class="row align-items-center feature-row">
+                <div class="col-md-6">
+                    <div class="feature-image"></div>
+                    <img src="/img/prior-automation-workflow.svg" class="img-fluid" alt="" />
+                </div>
+
+                <div class="col-md-6">
+                    <span class="badge feature-badge red">Bank-Level Security</span>
+                    <h3>HIPAA & SOC 2 Compliant</h3>
+                    <p>
+                        Enjoy enterprise-level security with end-to-end encryption and
+                        comprehensive audit trails. Rest easy knowing your sensitive data
+                        is protected from unauthorized access and complies with
+                        regulations, allowing you to concentrate on growing your business.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="row align-items-center feature-row flex-md-row-reverse">
+                <div class="col-md-6">
+                    <div class="feature-image"></div>
+                    <img src="/img/prior-automation-workflow.svg" class="img-fluid" alt="" />
+                </div>
+                <div class="col-md-6">
+                    <span class="badge feature-badge blue">Predictive AI</span>
+                    <h3>Advanced Analytics</h3>
+                    <p>
+                        Explore approval rates and denial trends to boost revenue.
+                        Predictive analytics reveal patterns, aiding informed decisions
+                        for better outcomes. Grasping these dynamics is key to optimizing
+                        processes and increasing success rates in future applications.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="row align-items-center feature-row">
+                <div class="col-md-6">
+                    <div class="feature-image"></div>
+                    <img src="/img/prior-automation-workflow.svg" class="img-fluid" alt="" />
+                </div>
+                <div class="col-md-6">
+                    <span class="badge feature-badge orange">Team Sync</span>
+                    <h3>Smart Collaboration</h3>
+                    <p>
+                        Discover a unified dashboard for your team with role-based access
+                        and automated notifications. This streamlined tool boosts
+                        collaboration and efficiency, helping your organization optimize
+                        workflows and enhance communication.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-2">Simple, Transparent Pricing</h2>
+            <p class="text-muted mb-5">Choose the plan that’s right for you.</p>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Free Trial -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="text-success fw-bold">Free Trial</h5>
+                            <p class="text-muted small">Best for first-time users</p>
+                            <h2 class="fw-bold mt-3">$0</h2>
+                            <p class="text-muted">for the first month</p>
+                            <ul class="list-unstyled text-start mt-3 flex-grow-1">
+                                <li>✔ Basic access to core features</li>
+                                <li>✔ Up to 50 authorizations/month</li>
+                                <li>✔ Standard EMR integration</li>
+                                <li>✔ Basic reporting & analytics</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary w-100 mt-auto">START FREE TRIAL</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional (Highlighted) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card pricing-featured shadow-lg border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="text-white fw-bold">Professional</h5>
+                            <p class="text-light small">Ideal for growing practices</p>
+                            <h2 class="fw-bold text-white mt-3">$699</h2>
+                            <p class="text-light">per month + 1.5% of reimbursed amount</p>
+                            <ul class="list-unstyled text-start mt-3 text-white flex-grow-1">
+                                <li>✔ Up to 2,000 authorizations/month</li>
+                                <li>✔ Advanced EMR integration</li>
+                                <li>✔ Advanced analytics dashboard</li>
+                                <li>✔ Priority phone & email support</li>
+                                <li>✔ Custom workflow configuration</li>
+                            </ul>
+                            <a href="#" class="btn btn-light w-100 mt-auto">GET STARTED</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold">Enterprise</h5>
+                            <p class="text-muted small">
+                                For large practices & health systems
+                            </p>
+                            <h2 class="fw-bold mt-3">Custom</h2>
+                            <p class="text-muted">Tailored pricing based on volume</p>
+                            <ul class="list-unstyled text-start mt-3 flex-grow-1">
+                                <li>✔ Unlimited authorizations</li>
+                                <li>✔ Multi-location support</li>
+                                <li>✔ White-label options</li>
+                                <li>✔ Dedicated account manager</li>
+                                <li>✔ 24/7 priority support</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary w-100 mt-auto">CONTACT NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row g-4 align-items-start">
+                <!-- Left: Info -->
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">
+                        Ready to simplify Prior Authorizations?
+                    </h2>
+                    <p class="mb-4">
+                        Join over 50+ practices that have transformed their authorization
+                        process with
+                        <strong>InstantAuth</strong>. Our team will show you exactly how
+                        we can help your practice save time and increase revenue.
+                    </p>
+
+                    <div class="mb-3 d-flex align-items-start">
+                        <i class="ph-phone-call ph-2x text-primary me-3"></i>
+                        <div>
+                            <strong>Schedule a Personal Demo</strong>
+                            <p class="mb-0 small text-muted">
+                                See InstantAuth in action with your actual data
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 d-flex align-items-start">
+                        <i class="ph-clock ph-2x text-primary me-3"></i>
+                        <div>
+                            <strong>Quick 30-Minute Setup</strong>
+                            <p class="mb-0 small text-muted">
+                                Get started with minimal disruption to your workflow
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 d-flex align-items-start">
+                        <i class="ph-handshake ph-2x text-primary me-3"></i>
+                        <div>
+                            <strong>Dedicated Support Team</strong>
+                            <p class="mb-0 small text-muted">
+                                Personal onboarding and ongoing assistance
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 mt-4 rounded bg-light border">
+                        <p class="mb-1 small text-muted">Need immediate assistance?</p>
+                        <strong>info@instantauth.io</strong>
+                        <p class="mb-0 small text-muted">
+                            We respond within 2 hours during business days
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">Contact Us</h5>
+                            <p class="small text-muted mb-4">
+                                Tell us about your practice so we can customize
+                                <strong>InstantAuth</strong> to your specific needs.
+                            </p>
+
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small">Full Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your name" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small">Your Role</label>
+                                        <select class="form-select">
+                                            <option>Select role</option>
+                                            <option>Doctor</option>
+                                            <option>Admin</option>
+                                            <option>Staff</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small">Practice/Organization Name</label>
+                                        <input type="text" class="form-control" placeholder="Organization name" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small">Phone Number</label>
+                                        <input type="tel" class="form-control" placeholder="+1" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small">Email</label>
+                                        <input type="email" class="form-control" placeholder="email@example.com" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small">Practice Size</label>
+                                        <select class="form-select">
+                                            <option>Small (1-10)</option>
+                                            <option>Medium (11-50)</option>
+                                            <option>Large (50+)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label small">Current EMR System</label>
+                                        <input type="text" class="form-control"
+                                            placeholder="e.g., Epic, Cerner, Allscripts" />
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label small">Current Prior Authorization Challenges
+                                            (Optional)</label>
+                                        <textarea rows="3" class="form-control"
+                                            placeholder="Tell us about your current challenges..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        Submit
+                                    </button>
+                                    <p class="small text-muted text-center mt-2 mb-0">
+                                        By submitting this form, you agree to our
+                                        <a href="#">Privacy Policy</a> and
+                                        <a href="#">Terms of Service</a>.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row footer-content">
+                <!-- Logo + Description -->
+                <div class="col-lg-3 col-md-6 mb-4 footer-brand">
+                    <img src="src/img/logo-dark.svg" alt="InstantAuth" class="footer-logo mb-3" />
+                    <p class="footer-text">
+                        Transforming healthcare through intelligent prior authorization
+                        automation. Helping practices focus on patient care instead of
+                        paperwork.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"><i class="ph ph-x-logo"></i></a>
+                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-heading">Product</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Our Success</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-heading">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="ph ph-envelope-simple"></i>
+                            <span>info@instantauth.io</span>
+                        </li>
+                        <li>
+                            <i class="ph ph-phone"></i>
+                            <span>(555) 123-44567</span>
+                        </li>
+                        <li>
+                            <i class="ph ph-map-pin"></i>
+                            <span>123 Main Street, Apt 4,<br />Anytown, CA 90210, USA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom d-flex justify-content-between align-items-center pt-4 mt-4 border-top">
+                <p class="mb-0">© 2025 InstantAuth. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Theme script file -->
+    <script src="src/js/index.js"></script>
+    <script>
+        (function () {
+            try {
+                const saved = localStorage.getItem("theme");
+                const prefersDark =
+                    window.matchMedia &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches;
+                const theme = saved || (prefersDark ? "dark" : "light");
+                document.documentElement.setAttribute("data-theme", theme);
+            } catch (e) { }
+        })();
+    </script>
+</body>
+
+</html>

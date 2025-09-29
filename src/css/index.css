@@ -1,0 +1,577 @@
+/* ---------------- SHARED TOKENS (only shared values here) ---------------- */
+:root{
+  --primary-blue: #478CD1;
+  --primary-color: #2563eb;
+  --radius-md: 8px;
+  --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+  /* generic fallbacks */
+  --btn-border-radius: var(--radius-md);
+  --site-max-width: 1220px;
+}
+
+/* ---------------- LIGHT THEME */
+html[data-theme="light"]{
+  /* page */
+  --body-bg-color: #ffffff;
+  --bg: #ffffff;
+  --text: #0f172a;          /* headline / primary text (dark) */
+  --muted: #6b7280;         /* subtitle / muted */
+  --text-primary: #0f172a;
+
+  /* navbar */
+  --nav-bg: #ffffff;
+  --nav-text-menu-color: #0f172a;
+  --nav-border: rgba(0,0,0,0.06);
+
+  /* hero */
+  --hero-gradient-bg: linear-gradient(162deg, #FFFFFF 11.47%, #E0ECFF 100%);
+  --hero-fluid-container-bg: #FFFFFF;
+  --hero-fluid-container-border: #C6C6C8;
+
+  /* --hero-badge-bg-color: #111E30;   
+  --hero-badge-text-color: #3475B5;
+  --hero-badge-border-color: #294F7B;
+  --hero-badge-selection-color: #478CD1; */
+
+
+    --hero-badge-bg-color: #EBF1F8;
+  --hero-badge-text-color: #478CD1;
+  --hero-badge-border-color: #A2C0DD;
+  --hero-badge-selection-color: #3475B5;
+
+  /* hero buttons */
+  --hero-btn-bg-color: #478CD1;     /* primary CTA blue */
+  --hero-btn-border-color: transparent;
+  --hero-btn-text-color: #ffffff;
+
+  --hero-btn2-bg-color: transparent; /* secondary CTA */
+  --hero-btn2-border-color: #D1D1D6;
+  --hero-btn2-text-color: #0f172a;
+  --hero-btn-work:#FBFBFB;
+  --hero-btn-color:#2B2B2B;
+
+  /* outline button (navbar Learn more) */
+  --btn-outline-bg: transparent;
+  --btn-outline-border: rgba(0,0,0,0.12);
+  --btn-outline-color: #0f172a;
+  .learn-more-btn {
+  text-decoration: none !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none !important;   /* removes background */
+  border: none !important;       /* removes border */
+  padding: 0;                    /* removes extra spacing */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+
+
+  /* footer */
+  /* --footer-bg: #07294D;
+  --footer-text: #f7f7f7; */
+}
+
+/* ---------------- DARK THEME */
+html[data-theme="dark"]{
+  /* page */
+  --body-bg-color: #212124;
+  --bg: #0f1720;
+  --text: #f8fafc;          /* light text */
+  --muted: #9fb3c6;
+  --text-primary: #f8fafc;
+
+  /* navbar */
+  --nav-bg: #212124;
+  --nav-text-menu-color: #f8fafc;
+  --nav-border: rgba(255,255,255,0.04);
+
+  /* hero */
+  --hero-gradient-bg: linear-gradient(162deg, #212124 11.47%, #003F7D 251.33%);
+  --hero-fluid-container-bg: #2E2E30;
+  --hero-fluid-container-border: #5E5E64;
+
+ --hero-badge-bg-color: #111E30;   
+  --hero-badge-text-color: #3475B5;
+  --hero-badge-border-color: #294F7B;
+  --hero-badge-selection-color: #478CD1;
+
+
+  /* hero buttons */
+  --hero-btn-bg-color: #478CD1;
+  --hero-btn-border-color: transparent;
+  --hero-btn-text-color: #ffffff;
+
+  --hero-btn2-bg-color: #242426;
+  --hero-btn2-border-color: #4D4D53;
+  --hero-btn2-text-color: #F5F5F5;
+  --hero-btn-work:#242426;
+  --hero-btn-color:#F5F5F5;
+  /* outline button (navbar Learn more) */
+  --btn-outline-bg: transparent;
+  --btn-outline-border: rgba(255,255,255,0.22);
+  --btn-outline-color: #f8fafc;
+/* Section */
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none !important;   /* removes background */
+  border: none !important;       /* removes border */
+  padding: 0;                    /* removes extra spacing */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.contact-section {
+  background: linear-gradient(180deg, #f9fafb, #e5e7eb);
+}
+
+/* Card */
+.card {
+  border-radius: 12px;
+}
+
+/* Inputs */
+.form-control,
+.form-select {
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Button */
+.btn-primary {
+  background: linear-gradient(90deg, #3B82F6, #2563EB);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background: #a6d4ff;
+  color: #00244a;
+}
+
+
+  /* footer */
+  /* --footer-bg: #07294D;
+  --footer-text: #f7f7f7; */
+}
+
+/* Section */
+.pricing {
+  background: #f9fafb;
+}
+
+/* Cards */
+.card {
+  border-radius: 16px;
+  transition: transform 0.2s;
+}
+
+/* Middle Featured Card */
+.pricing-featured {
+  background: linear-gradient(180deg, #2563EB, #1D4ED8);
+  color: #fff;
+  transform: scale(1.05); /* standout */
+  min-height: 100%;       /* taller */
+}
+
+/* Lists */
+.card ul li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-outline-primary {
+  border: 1px solid #2563EB;
+}
+.btn-outline-primary:hover {
+  background: #2563EB;
+  color: #fff;
+}
+
+.ai-text {
+  position: relative;
+  display: inline-block;
+}
+
+.i-letter {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+}
+
+.ai-text {
+  position: relative;
+  display: inline-block;
+}
+
+.i-letter {
+  position: relative;
+  display: inline-block;
+}
+
+.i-icon {
+  position: absolute;
+  top: -14px;        /* moves icon above the I */
+  left: 50%;         /* center over the I */
+  transform: translateX(-50%);
+  width: 16px;       /* adjust size */
+  height: 16px;
+  pointer-events: none; /* avoid accidental clicks */
+}
+
+
+
+/* ---------------- BASE / LAYOUT ---------------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  background: var(--body-bg-color);
+  color: var(--text);
+  /* transition: background 300ms ease, color 300ms ease; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;#FBFBFB
+  /* cursor: default; */
+}
+
+/* ---------------- NAVBAR ---------------- */
+/* .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  padding: .9rem 0;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+} */
+
+.navbar {
+  position: fixed;     /* stays fixed to viewport */
+  top: 0;
+  left: 0;
+  width: 100%;         /* full width */
+  z-index: 1030;
+  padding: .9rem 0;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+
+.navbar .nav-link {
+  color: var(--nav-text-menu-color);
+  text-decoration: none;
+  transition: none !important; /* disable hover transitions */
+}
+
+/* Shared button styles */
+button, 
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px; /* curved edges */
+}
+
+/* Navbar background (dark gray/black) */
+/* .navbar-bg {
+  background-color: #1f2937; /* adjust to your navbar color */
+
+/* Learn More button */
+.btn-learn {
+  background-color: #242426; /* same as navbar */
+  color: #fff;
+  border: 1px solid var(--Stroke-04, #4D4D53)
+  
+}
+.btn-work {
+  background-color: var(--hero-btn-work); /* primary blue */
+  color: var(--hero-btn-color);
+  border: ;
+
+}
+.hero-buttons {
+  gap :20px !important ;
+}
+
+.btn-learn:hover {
+  background-color: #4D4D53; /* lighter shade */
+  border: 1px solid #2c2c32;
+  border-radius: 6px;
+}
+
+/* Navbar "Start Free Trial" button */
+.btn-primary {
+  background: #0b63d6;
+  border: none;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #a6d4ff;
+  color: #00244a;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 150px 0px 50px 0px;
+  gap: 20px;
+  background: var(--hero-gradient-bg);
+  height: 800px;
+}
+
+.hero .badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--hero-badge-bg-color);
+  color: var(--hero-badge-text-color);
+  border: 1px solid var(--hero-badge-border-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  user-select: none;
+  width:auto;
+}
+
+/* text */
+.hero-title { color: var(--text-primary);
+  line-height: inherit;
+  font-weight: 500; }
+.hero-subtitle { color: var(--muted); 
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 145%;
+margin-bottom: 32px;
+}
+
+
+
+/* ---------------- TRUST BAR / LOGOS ---------------- */
+.trust-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  padding: 40px 56px;
+  background: transparent;
+  text-align: center;
+}
+.trust-bar p { font-size: 16px; font-weight: 400; color: var(--muted); margin: 0; }
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.logos img {
+  height: 32px;
+  max-width: 120px;
+  object-fit: contain;
+  background: none;
+  box-shadow: none;
+  filter: none;
+  transform: none;
+  transition: none !important;
+  pointer-events: none; /* disable hover interactions on logos */
+}
+
+/* ---------------- HOW SECTION ---------------- */
+.how-section { padding: 60px 20px;
+   background: transparent; 
+   text-align: center; }
+.how-section h2 { font-size: 2rem; 
+  font-weight: 700;
+   margin-bottom: 12px; }
+.how-section p.subtitle { color: var(--muted); 
+  max-width: 700px;
+   margin: 0 auto 40px; }
+
+.how-card {
+  background: transparent;
+  border: 1.5px dashed rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  height: 100%;
+}
+html[data-theme="dark"] .how-card { border-color: rgba(255,255,255,0.08); }
+
+/* ---------------- PRIOR AUTH ---------------- */
+.prior-auth-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 56px 48px; */
+  padding-left: 56px;
+  border-radius: 24px;
+  border: 1px solid #294F7B;
+  background: var(--hero-fluid-container-bg);
+  margin: 40px auto;
+  max-width: var(--site-max-width);
+  color: var(--text-primary);
+  gap: 40px;
+  
+}
+.form-mockup{
+   border-top-right-radius: 24px;
+}
+
+/* ---------------- FEATURES ---------------- */
+.features-section {
+  background: transparent;
+  padding: 80px 20px;
+  color: var(--text-primary);
+}
+/* ... keep your existing feature styles, but rely on variables above for colors ... */
+
+/* Footer Base */
+.site-footer {
+  background: #07294D; 
+  color: #fff;
+  padding: 88px 56px 48px 56px; /* from Figma */
+}
+
+/* Brand Area */
+.footer-logo {
+  height: 40px;
+}
+.footer-text {
+  margin-bottom: 20px;
+  color: #cbd5e1; /* Grey/02 */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Social Icons */
+.footer-social a {
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background: #0f3a62;
+  border-radius: 8px;
+  color: #fff;
+  margin-right: 8px;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+.footer-social a:hover {
+  background: #1d4f7a;
+}
+
+/* Section Headings */
+.footer-heading {
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+/* Links */
+.footer-content ul {
+  padding: 0;
+  list-style: none;
+}
+.footer-content ul li {
+  margin-bottom: 10px;
+}
+.footer-content ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.footer-content ul li a:hover {
+  color: #fff;
+}
+
+/* Contact Us */
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.footer-contact i {
+  font-size: 18px;
+  color: #cbd5e1;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+.footer-bottom .footer-links a {
+  margin-left: 20px;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+.footer-bottom .footer-links a:hover {
+  color: #fff;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 992px) {
+  .hero { padding: 80px 32px; }
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 16px; max-width: 700px; }
+  .hero-buttons { gap: 16px; }
+
+  .prior-auth-section { flex-direction: column; padding: 40px 24px; text-align: center; }
+  .prior-auth-content { max-width: 100%; }
+  .prior-auth-section img { max-width: 90%; height: auto; margin-top: 20px; }
+  .footer-content { text-align: center; }
+}
+
+/* smaller breakpoints */
+@media (max-width: 768px) {
+  .hero { padding: 60px 20px; }
+  .hero-title { font-size: 1.8rem; line-height: 1.3; }
+  .hero-subtitle { font-size: 1rem; margin: 12px auto 20px; }
+}
+@media (max-width: 576px) {
+  .hero { padding: 60px 20px; }
+  .hero-title { font-size: 1.6rem; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; }
+  .logos { gap: 24px; }
+  .logos img { height: 26px; }
+}
