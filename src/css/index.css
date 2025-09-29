@@ -288,7 +288,9 @@ html[data-theme="dark"]{
 
 /* ---------------- BASE / LAYOUT ---------------- */
 * { box-sizing: border-box; }
+
 html, body { height: 100%; margin: 0; padding: 0; }
+
 body {
   font-family: var(--font-sans);
   background: var(--body-bg-color);
@@ -475,7 +477,7 @@ margin-bottom: 32px;
 }
 .logos img {
   height: 32px;
-  max-width: 120px;
+  /* max-width: 120px; */
   object-fit: contain;
   background: none;
   box-shadow: none;
@@ -551,7 +553,9 @@ html[data-theme="dark"] .how-card {
   line-height: 1.6;
 }
 
-
+.feature-row {
+  padding: 50px 0px;
+}
 /* ---------------- PRIOR AUTH ---------------- */
 .prior-auth-section {
   display: flex;
