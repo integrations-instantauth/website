@@ -50,7 +50,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
+            <ul class="navbar-nav mx-auto main-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">How It Works</a>
               </li>
@@ -66,9 +66,9 @@
               </li>
             </ul>
 
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-learn">Learn More</button>
-              <button class="btn btn-primary">Start Free Trial</button>
+            <div class="d-flex align-items-center navbar-cta-group">
+              <button class="btn btn-learn" data-scroll-target="#Frame1618874239">Learn More</button>
+              <button class="btn btn-primary startfreetrial" data-bs-toggle="modal" data-bs-target="#trialModal">Start Free Trial</button>
 
               <button
                 id="themeToggle"
@@ -99,13 +99,9 @@
 
           <h1 class="hero-title gradient-text">
             <span class="ai-text">
-              A<span class="i-letter">
-                I
-                <img src="./src/img/ai-dark.svg" alt="Star Icon" class="i-icon"
-                />
-              </span>
+              A<span class="i-letter">I<img src="./src/img/ai-dark.svg" alt="Star Icon" class="i-icon"/></span>
             </span>
-            - <span class="italic-text">Powered</span> Platform for Patient
+            <span class="dash">-</span> <span class="italic-text">Powered</span> Platform for Patient
             Intake,<br />
             Encounters & Prior Authorizations
           </h1>
@@ -170,6 +166,21 @@
       </div>
     </section>
     <!-- END HERO -->
+
+    <!-- Start Free Trial Modal -->
+    <div class="modal fade" id="trialModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Start Free Trial</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-0">Thanks for your interest. Our team will reach out shortly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="how-section">
       <h2>How InstantAuth Works</h2>
@@ -268,16 +279,17 @@
         <!-- Row 1 -->
         <div class="row align-items-center feature-row">
           <div class="col-md-6">
-            <div class="">
+            <div class="container0">
               <img
                 src="src/img/prior-automation-workflow.svg"
                 class="img-fluid"
-                alt=""
+                alt="workflow"
               />
             </div>
           </div>
           <div class="col-md-6">
-            <span class="badge feature-badge green">95% Reduction</span>
+           <span class="feature-badge badge-blue">95% Reduction</span>
+
             <h3>AI-Powered Automation</h3>
             <p>
               Streamlined workflows for prior authorizations cut manual tasks by
@@ -295,11 +307,11 @@
             <img
               src="src/img/prior-automation-workflow.svg"
               class="img-fluid"
-              alt=""
+              alt="workflow"
             />
           </div>
           <div class="col-md-6">
-            <span class="badge feature-badge purple">Instant Updates</span>
+           <span class="feature-badge badge-purple">Instant Updates</span>
             <h3>Real-Time Processing</h3>
             <p>
               Receive instant updates on authorization status with smart
@@ -316,12 +328,12 @@
             <img
               src="src/img/prior-automation-workflow.svg""
               class="img-fluid"
-              alt=""
+              alt="workflow"
             />
           </div>
 
           <div class="col-md-6">
-            <span class="badge feature-badge red">Bank-Level Security</span>
+           <span class="feature-badge badge-red">Bank-Level Security</span>
             <h3>HIPAA & SOC 2 Compliant</h3>
             <p>
               Enjoy enterprise-level security with end-to-end encryption and
@@ -339,11 +351,11 @@
             <img
               src="src/img/prior-automation-workflow.svg"
               class="img-fluid"
-              alt=""
+              alt="workflow"
             />
           </div>
           <div class="col-md-6">
-            <span class="badge feature-badge blue">Predictive AI</span>
+        <span class="feature-badge badge-orange">Team Sync</span>
             <h3>Advanced Analytics</h3>
             <p>
               Explore approval rates and denial trends to boost revenue.
@@ -361,11 +373,12 @@
             <img
               src="src/img/prior-automation-workflow.svg"
               class="img-fluid"
-              alt=""
+              alt="workflow"
             />
           </div>
           <div class="col-md-6">
-            <span class="badge feature-badge orange">Team Sync</span>
+          <span class="feature-badge badge-green">05+ EMRs</span>
+
             <h3>Smart Collaboration</h3>
             <p>
               Discover a unified dashboard for your team with role-based access
@@ -602,6 +615,112 @@
         </div>
       </div>
     </section> -->
+
+    <!-- Contact CTA Section (Ready to Simplify + Contact Us) -->
+    <section class="contact-cta" aria-labelledby="contact-cta-title">
+      <div class="contact-cta__container">
+        <!-- Left Info Panel -->
+        <div class="contact-cta__info">
+          <h2 id="contact-cta-title" class="contact-cta__headline">Ready to simplify Prior Authorizations?</h2>
+          <p class="contact-cta__subtext">
+            Join over 50+ practices that have transformed their authorization process with
+            <strong>InstantAuth</strong>. Our team will show you exactly how we can help your practice save time and increase revenue.
+          </p>
+
+          <ul class="contact-cta__features">
+            <li class="contact-cta__feature">
+              <span class="contact-cta__icon">
+                <img src="src/img/Phone.svg" alt="Schedule a Personal Demo" />
+              </span>
+              <div>
+                <div class="feature-title">Schedule a Personal Demo</div>
+                <div class="feature-desc">See InstantAuth in action with your actual data</div>
+              </div>
+            </li>
+            <li class="contact-cta__feature">
+              <span class="contact-cta__icon">
+                <img src="src/img/ClockCountdown.svg" alt="Quick 30-Minute Setup" />
+              </span>
+              <div>
+                <div class="feature-title">Quick 30-Minute Setup</div>
+                <div class="feature-desc">Get started with minimal disruption to your workflow</div>
+              </div>
+            </li>
+            <li class="contact-cta__feature">
+              <span class="contact-cta__icon">
+                <img src="src/img/EnvelopeSimple.svg" alt="Dedicated Support Team" />
+              </span>
+              <div>
+                <div class="feature-title">Dedicated Support Team</div>
+                <div class="feature-desc">Personal onboarding and ongoing assistance</div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-cta__support">
+            <p class="support-kicker">Need immediate assistance?</p>
+            <strong>info@instantauth.io</strong>
+            <p class="support-sub">We respond within 2 hours during business days</p>
+          </div>
+        </div>
+
+        <!-- Right Form Card -->
+        <aside class="contact-cta__card" aria-label="Contact form">
+          <h3 class="card-title">Contact Us</h3>
+          <p class="card-sub">Tell us about your practice so we can customize <strong>InstantAUTH</strong> to your specific needs.</p>
+
+          <form class="contact-cta__form" novalidate>
+            <div class="form-grid">
+              <label class="form-field">
+                <span class="form-label">Full Name</span>
+                <input type="text" class="form-input" placeholder="" />
+              </label>
+              <label class="form-field">
+                <span class="form-label">Your Role</span>
+                <select class="form-input">
+                  <option value="" selected disabled>Select</option>
+                  <option>Doctor</option>
+                  <option>Admin</option>
+                  <option>Staff</option>
+                </select>
+              </label>
+              <label class="form-field form-span-2">
+                <span class="form-label">Practice/Organization Name</span>
+                <input type="text" class="form-input" placeholder="" />
+              </label>
+              <label class="form-field">
+                <span class="form-label">Email</span>
+                <input type="email" class="form-input" placeholder="" />
+              </label>
+              <label class="form-field">
+                <span class="form-label">Phone Number</span>
+                <input type="tel" class="form-input" placeholder="+1" />
+              </label>
+              <label class="form-field">
+                <span class="form-label">Practice Size</span>
+                <select class="form-input">
+                  <option>Small (1-10)</option>
+                  <option>Medium (11-50)</option>
+                  <option>Large (50+)</option>
+                </select>
+              </label>
+              <label class="form-field">
+                <span class="form-label">Current EMR System</span>
+                <input type="text" class="form-input" placeholder="e.g., Epic, Cerner, Allscripts" />
+              </label>
+              <label class="form-field form-span-2">
+                <span class="form-label">Current Prior Authorization Challenges (Optional)</span>
+                <textarea rows="3" class="form-input" placeholder="Tell us about your current challenges with prior authorizations..."></textarea>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Submit</button>
+            <p class="form-fineprint">By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
