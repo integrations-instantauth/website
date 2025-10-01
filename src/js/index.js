@@ -62,6 +62,20 @@
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       const theme = attr || saved || (prefersDark ? 'dark' : 'light');
       setTheme(theme);
+
+      // Learn More smooth scroll
+      document.querySelectorAll('[data-scroll-target]')?.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const target = btn.getAttribute('data-scroll-target');
+          if (target) {
+            const el = document.querySelector(target);
+            if (el) {
+              e.preventDefault();
+              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
     }
   
     // Wire up toggles
@@ -87,4 +101,11 @@
   })();
   
   
-  
+  document.addEventListener("DOMContentLoaded", () => {
+  const toggler = document.querySelector(".navbar-toggler");
+  const navMenu = document.querySelector(".main-nav");
+
+  toggler.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+});
