@@ -2,6 +2,7 @@
 (function () {
     const THEME_KEY = 'theme';
     const themeToggle = document.getElementById('themeToggle');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
     const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
     const html = document.documentElement;
     const logo = document.getElementById('siteLogo');
@@ -12,6 +13,13 @@
       const toggleLogo = document.getElementById('toggleLogo');
       if (toggleLogo) {
         toggleLogo.src = theme === 'dark'
+          ? 'src/img/toggle-dark.svg'   // shows sun/light icon when dark theme is active
+          : 'src/img/toggle-light.svg';   // shows moon/dark icon when light theme is active
+      }
+
+      const toggleLogoMobile = document.getElementById('toggleLogoMobile');
+      if (toggleLogoMobile) {
+        toggleLogoMobile.src = theme === 'dark'
           ? 'src/img/toggle-dark.svg'   // shows sun/light icon when dark theme is active
           : 'src/img/toggle-light.svg';   // shows moon/dark icon when light theme is active
       }
@@ -56,14 +64,19 @@
       setTheme(theme);
     }
   
-    // Wire up toggle
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const current = html.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-        const next = current === 'dark' ? 'light' : 'dark';
-        setTheme(next);
-      });
+    // Wire up toggles
+    function addToggleListener(toggle) {
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const current = html.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          setTheme(next);
+        });
+      }
     }
+
+    addToggleListener(themeToggle);
+    addToggleListener(themeToggleMobile);
   
     // Init on DOM ready
     if (document.readyState === 'loading') {
