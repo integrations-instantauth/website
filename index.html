@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-  <link rel="icon" href="./src/img/favicon_light (1).png" type="image/x-icon">
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="./src/img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="./src/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="./src/img/favicon.png">
   <title>InstantAuth</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
@@ -17,7 +18,7 @@
 <body>
   <!-- NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg shadow-sm">
+    <nav class="navbar navbar-expand-lg ">
       <div class="container">
         <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
           <img id="siteLogo" src="src/img/logo-dark.svg" alt="InstantAuth Logo" height="32" class="me-2" />
@@ -55,9 +56,12 @@
           </div>
         </div>
         <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+        <button class="navbar-toggler d-lg-none logos" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <img src="src/img/toggler-icon-dark.svg" class="img-fluid" data-light="src/img/toggler-icon-light.svg"
+          data-dark="src/img/toggler-icon-dark.svg" class="img-fluid"/>
+
         </button>
         
       </div>
@@ -92,7 +96,7 @@
       <div class="mt-4 d-flex flex-column gap-3">
         <button class="btn-learn w-100">Learn More</button>
         <button class="btn-free-trial w-100">Start Free Trial</button>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center ">
           <button id="themeToggleMobile" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
             <img id="toggleLogoMobile" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16" width="16" />
           </button>
@@ -137,11 +141,11 @@
         <div class="logos">
           <img src="src/img/epic-dark.svg" class="img-fluid" data-light="src/img/epic-light.svg"
             data-dark="src/img/epic-dark.svg" class="img-fluid" alt="Epic" />
-          <img src="src/img/oracle-dark.png" class="img-fluid" data-light="src/img/oracle-light.png"
+          <img src="src/img/oracle-dark.svg" class="img-fluid" data-light="src/img/oracle-light.png"
             data-dark="src/img/oracle-dark.svg" alt="Oracle Cerner" />
           <img src="src/img/allscript-dark.svg" class="img-fluid" data-light="src/img/allscript-light.svg"
             data-dark="src/img/allscript-dark.svg" alt="Allscripts" />
-          <img src="src/img/athenahealth-dark.png" class="img-fluid" data-light="src/img/athenahealth-light.png"
+          <img src="src/img/athenahealth-dark.svg" class="img-fluid" data-light="src/img/athenahealth-light.png"
             data-dark="src/img/athenahealth-dark.svg" alt="athenahealth" />
           <img src="src/img/advancedmd-dark.svg" class="img-fluid" data-light="src/img/advancedmd-light.svg"
             data-dark="src/img/advancedmd-dark.svg" alt="AdvancedMD" />
@@ -207,34 +211,38 @@
   </section>
 
   <!-- PRIOR AUTH SECTION -->
-  <section class="prior-auth-section">
-    <div class="prior-auth-content">
-      <small>Largely Automated Encounters | HIPAA-Compliant | CMS-Compliant</small>
-      <h2>
-        Automated Prior Authorization Forms – Faster, Accurate, Compliant
-      </h2>
-      <p>
-        InstantAuth streamlines prior authorization with auto-filled patient
-        and insurance details, reducing manual entry errors and accelerating
-        approvals.
-      </p>
-      <a href="#" class="btn btn-free-trial">Start Free Trial</a>
-      <small>*T&C apply</small>
-    </div>
-    <div>
-      <img id="framebox" src="src/img/frame-box-img.svg" alt="Form Mockup" class="form-mockup" />
+  <section class="container">
+    <div class="row">
+      <div class="prior-auth-section">
+        <div class="prior-auth-content">
+          <small>Largely Automated Encounters | HIPAA-Compliant | CMS-Compliant</small>
+          <h2>
+            Automated Prior Authorization Forms – Faster, Accurate, Compliant
+          </h2>
+          <p>
+            InstantAuth streamlines prior authorization with auto-filled patient
+            and insurance details, reducing manual entry errors and accelerating
+            approvals.
+          </p>
+          <a href="#" class="btn btn-free-trial">Start Free Trial</a>
+          <small>*T&C apply</small>
+        </div>
+        <div class="hook-banner">
+          <img id="framebox" src="src/img/frame-box-img.svg" alt="Form Mockup" class="form-mockup" />
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FEATURES & BENEFITS -->
-  <section class="features-section">
+  <!-- <section class="features-section">
     <div class="container">
       <h2 class="section-title text-center">Features & Benefits</h2>
       <p class="subtitle text-center">
         From reducing paperwork to faster reimbursements, InstantAuth is built
         to help practices save time, lower costs, and improve patient care.
       </p>
-      <!-- Row 1 -->
+      
       <div class="row align-items-center feature-row">
         <div class="col-md-6">
           <div class="">
@@ -253,7 +261,7 @@
           </p>
         </div>
       </div>
-      <!-- Row 2 -->
+      
       <div class="row align-items-center feature-row flex-md-row-reverse">
         <div class="col-md-6">
           <div class="feature-image"></div>
@@ -270,7 +278,7 @@
           </p>
         </div>
       </div>
-      <!-- Row 3 -->
+     
       <div class="row align-items-center feature-row">
         <div class="col-md-6">
           <div class="feature-image"></div>
@@ -289,7 +297,6 @@
         </div>
       </div>
 
-      <!-- Row 4 -->
       <div class="row align-items-center feature-row flex-md-row-reverse">
         <div class="col-md-6">
           <div class="feature-image"></div>
@@ -307,7 +314,6 @@
         </div>
       </div>
 
-      <!-- Row 5 -->
       <div class="row align-items-center feature-row">
         <div class="col-md-6">
           <div class="feature-image"></div>
@@ -325,7 +331,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+
   <!-- 
     
     <section class="pricing py-5">
@@ -556,8 +564,8 @@
     <div class="container">
       <div class="row footer-content">
         <!-- Logo + Description -->
-        <div class="col-lg-3 col-md-6 mb-4 footer-brand">
-          <img src="src/img/logo-dark.svg" alt="InstantAuth" class="footer-logo mb-3" />
+        <div class="col-lg-4 col-md-12 col-sm-12 mb-5 footer-brand">
+          <img src="src/img/logo-dark.svg" alt="InstantAuth" class="footer-logo mb-3 img-fluid" />
           <p class="footer-text">
             Transforming healthcare through intelligent prior authorization
             automation. Helping practices focus on patient care instead of
@@ -571,7 +579,7 @@
         </div>
 
         <!-- Product -->
-        <div class="col-lg-2 col-md-6 mb-4">
+        <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
           <h5 class="footer-heading">Product</h5>
           <ul class="list-unstyled">
             <li><a href="#">How It Works</a></li>
@@ -581,7 +589,7 @@
         </div>
 
         <!-- Company -->
-        <div class="col-lg-2 col-md-6 mb-4">
+        <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
           <h5 class="footer-heading">Company</h5>
           <ul class="list-unstyled">
             <li><a href="#">Our Success</a></li>
@@ -593,7 +601,7 @@
         </div>
 
         <!-- Support -->
-        <div class="col-lg-2 col-md-6 mb-4">
+        <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
           <h5 class="footer-heading">Support</h5>
           <ul class="list-unstyled">
             <li><a href="#">Contact Us</a></li>
@@ -602,12 +610,13 @@
         </div>
 
         <!-- Contact Us -->
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
           <h5 class="footer-heading">Contact Us</h5>
           <ul class="contact-list">
             <li>
               <i class="ph ph-envelope-simple"></i>
-              <span>info@instantauth.io</span>
+              <!-- <a href="mailto:info@instantauth.io" target="_blank">info@instantauth.io</a> -->
+              <span href="mailto:info@instantauth.io" target="_blank">info@instantauth.io</span>
             </li>
             <li>
               <i class="ph ph-phone"></i>
@@ -615,19 +624,27 @@
             </li>
             <li>
               <i class="ph ph-map-pin"></i>
-              <span>123 Main Street, Apt 4,<br />Anytown, CA 90210, USA</span>
+              <span>3241 Bayshore Blvd. NE, Saint Petersburg, FL, 33703</span>
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Bottom Bar -->
-      <div class="footer-bottom d-flex justify-content-between align-items-center pt-4 mt-4 border-top">
-        <p class="mb-0">© 2025 InstantAuth. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Cookie Policy</a>
+      <div class=" footer-bottom d-flex justify-content-between align-items-center pt-4 mt-4 ">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12">
+              <p class="mb-0">© 2025 InstantAuth. All rights reserved.</p>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 ">
+              <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookie Policy</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
