@@ -138,23 +138,33 @@
       </div>
       <div class="row pt-5">
         <p class="mb-4">Seamlessly integrates with leading EMRs.</p>
-        <div class="logos">
-          <img src="src/img/epic-dark.svg" class="img-fluid" data-light="src/img/epic-light.svg"
-            data-dark="src/img/epic-dark.svg" class="img-fluid" alt="Epic" />
-          <img src="src/img/oracle-dark.svg" class="img-fluid" data-light="src/img/oracle-light.png"
-            data-dark="src/img/oracle-dark.svg" alt="Oracle Cerner" />
-          <img src="src/img/allscript-dark.svg" class="img-fluid" data-light="src/img/allscript-light.svg"
-            data-dark="src/img/allscript-dark.svg" alt="Allscripts" />
-          <img src="src/img/athenahealth-dark.svg" class="img-fluid" data-light="src/img/athenahealth-light.png"
-            data-dark="src/img/athenahealth-dark.svg" alt="athenahealth" />
-          <img src="src/img/advancedmd-dark.svg" class="img-fluid" data-light="src/img/advancedmd-light.svg"
-            data-dark="src/img/advancedmd-dark.svg" alt="AdvancedMD" />
-        </div>
+
+
+  <div class="logo-carousel">
+    <div class="logo-track">
+      <!-- 1st set -->
+      <img src="src/img/epic-dark.svg" alt="Epic" class="carousel-logo" data-light="src/img/epic-light.svg" data-dark="src/img/epic-dark.svg" />
+      <img src="src/img/oracle-dark.svg" alt="Oracle Cerner" class="carousel-logo" data-light="src/img/oracle-light.png" data-dark="src/img/oracle-dark.svg" />
+      <img src="src/img/allscript-dark.svg" alt="Allscripts" class="carousel-logo" data-light="src/img/allscript-light.svg" data-dark="src/img/allscript-dark.svg" />
+      <img src="src/img/athenahealth-dark.svg" alt="Athenahealth" class="carousel-logo" data-light="src/img/athenahealth-light.png" data-dark="src/img/athenahealth-dark.svg" />
+      <img src="src/img/advancedmd-dark.svg" alt="AdvancedMD" class="carousel-logo" data-light="src/img/advancedmd-light.svg" data-dark="src/img/advancedmd-dark.svg" />
+
+      <!-- duplicate set for seamless looping -->
+      <img src="src/img/epic-dark.svg" alt="Epic" class="carousel-logo" />
+      <img src="src/img/oracle-dark.svg" alt="Oracle Cerner" class="carousel-logo" />
+      <img src="src/img/allscript-dark.svg" alt="Allscripts" class="carousel-logo" />
+      <img src="src/img/athenahealth-dark.svg" alt="Athenahealth" class="carousel-logo" />
+      <img src="src/img/advancedmd-dark.svg" alt="AdvancedMD" class="carousel-logo" />
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </section>
   <!-- END HERO -->
 
+  <!-- how it sections-->
   <section class="how-section">
     <h2>How InstantAuth Works</h2>
     <p class="subtitle">
@@ -210,6 +220,8 @@
     </div>
   </section>
 
+  <!-- END how it sections-->
+
   <!-- PRIOR AUTH SECTION -->
   <section class="container">
     <div class="row">
@@ -234,8 +246,10 @@
     </div>
   </section>
 
+  
+
   <!-- FEATURES & BENEFITS -->
-  <!-- <section class="features-section">
+   <!-- <section class="features-section">
     <div class="container">
       <h2 class="section-title text-center">Features & Benefits</h2>
       <p class="subtitle text-center">
@@ -328,237 +342,84 @@
             collaboration and efficiency, helping your organization optimize
             workflows and enhance communication.
           </p>
-        </div>
+        </div>-->
       </div>
     </div>
-  </section> -->
+  </section> 
+<section class="demo-contact-section py-5">
+  <div class="container">
+    <div class="row align-items-start justify-content-between g-5">
+       
+      <!-- LEFT: Text Block -->
+      <div class="col-lg-6 col-md-12">
+        <div class="demo-info-content">
+          <h2 class="demo-heading">Ready to simplify Prior Authorizations?</h2>
+          <p class="demo-description">
+             Our team will show you exactly how we can help your practice 
+            save time and increase revenue.
+          </p>
 
+          <ul class="demo-points">
+            <li>
+              <i class="ph ph-phone-call"></i>
+              <div>
+                <h4>Schedule a Personal Demo</h4>
+                <p>See InstantAuth in action with your actual data</p>
+              </div>
+            </li>
+            <li>
+             <i class="ph ph-clock"></i>
+              <div>
+                <h4>Quick 30-Minute Setup</h4>
+                <p>Get started with minimal disruption to your workflow</p>
+              </div>
+            </li>
+            <li>
+           <i class="ph ph-handshake"></i>
+              <div>
+                <h4>Dedicated Support Team</h4>
+                <p>Personal onboarding and ongoing assistance</p>
+              </div>
+            </li>
+          </ul>
 
-  <!-- 
-    
-    <section class="pricing py-5">
-      <div class="container text-center">
-        <h2 class="fw-bold mb-2">Simple, Transparent Pricing</h2>
-        <p class="text-muted mb-5">Choose the plan that’s right for you.</p>
-
-        <div class="row g-4 justify-content-center">
-          
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm border-0">
-              <div class="card-body d-flex flex-column">
-                <h5 class="text-success fw-bold">Free Trial</h5>
-                <p class="text-muted small">Best for first-time users</p>
-                <h2 class="fw-bold mt-3">$0</h2>
-                <p class="text-muted">for the first month</p>
-                <ul class="list-unstyled text-start mt-3 flex-grow-1">
-                  <li>✔ Basic access to core features</li>
-                  <li>✔ Up to 50 authorizations/month</li>
-                  <li>✔ Standard EMR integration</li>
-                  <li>✔ Basic reporting & analytics</li>
-                </ul>
-                <a href="#" class="btn btn-outline-primary w-100 mt-auto"
-                  >START FREE TRIAL</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card pricing-featured shadow-lg border-0">
-              <div class="card-body d-flex flex-column">
-                <h5 class="text-white fw-bold">Professional</h5>
-                <p class="text-light small">Ideal for growing practices</p>
-                <h2 class="fw-bold text-white mt-3">$699</h2>
-                <p class="text-light">per month + 1.5% of reimbursed amount</p>
-                <ul
-                  class="list-unstyled text-start mt-3 text-white flex-grow-1"
-                >
-                  <li>✔ Up to 2,000 authorizations/month</li>
-                  <li>✔ Advanced EMR integration</li>
-                  <li>✔ Advanced analytics dashboard</li>
-                  <li>✔ Priority phone & email support</li>
-                  <li>✔ Custom workflow configuration</li>
-                </ul>
-                <a href="#" class="btn btn-light w-100 mt-auto">GET STARTED</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm border-0">
-              <div class="card-body d-flex flex-column">
-                <h5 class="fw-bold">Enterprise</h5>
-                <p class="text-muted small">
-                  For large practices & health systems
-                </p>
-                <h2 class="fw-bold mt-3">Custom</h2>
-                <p class="text-muted">Tailored pricing based on volume</p>
-                <ul class="list-unstyled text-start mt-3 flex-grow-1">
-                  <li>✔ Unlimited authorizations</li>
-                  <li>✔ Multi-location support</li>
-                  <li>✔ White-label options</li>
-                  <li>✔ Dedicated account manager</li>
-                  <li>✔ 24/7 priority support</li>
-                </ul>
-                <a href="#" class="btn btn-outline-primary w-100 mt-auto"
-                  >CONTACT NOW</a
-                >
-              </div>
-            </div>
+          <div class="demo-support-card">
+            <small>Need immediate assistance?</small>
+            <p><strong>info@instantauth.io</strong></p>
+            <span>We respond within 2 hours during business days</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="contact-section py-5">
-      <div class="container">
-        <div class="row g-4 align-items-start">
-        
-          <div class="col-lg-6">
-            <h2 class="fw-bold mb-3">
-              Ready to simplify Prior Authorizations?
-            </h2>
-            <p class="mb-4">
-              Join over 50+ practices that have transformed their authorization
-              process with
-              <strong>InstantAuth</strong>. Our team will show you exactly how
-              we can help your practice save time and increase revenue.
-            </p>
-
-            <div class="mb-3 d-flex align-items-start">
-              <i class="ph-phone-call ph-2x text-primary me-3"></i>
-              <div>
-                <strong>Schedule a Personal Demo</strong>
-                <p class="mb-0 small text-muted">
-                  See InstantAuth in action with your actual data
-                </p>
-              </div>
-            </div>
-
-            <div class="mb-3 d-flex align-items-start">
-              <i class="ph-clock ph-2x text-primary me-3"></i>
-              <div>
-                <strong>Quick 30-Minute Setup</strong>
-                <p class="mb-0 small text-muted">
-                  Get started with minimal disruption to your workflow
-                </p>
-              </div>
-            </div>
-
-            <div class="mb-3 d-flex align-items-start">
-              <i class="ph-handshake ph-2x text-primary me-3"></i>
-              <div>
-                <strong>Dedicated Support Team</strong>
-                <p class="mb-0 small text-muted">
-                  Personal onboarding and ongoing assistance
-                </p>
-              </div>
-            </div>
-
-            <div class="p-3 mt-4 rounded bg-light border">
-              <p class="mb-1 small text-muted">Need immediate assistance?</p>
-              <strong>info@instantauth.io</strong>
-              <p class="mb-0 small text-muted">
-                We respond within 2 hours during business days
-              </p>
-            </div>
-          </div>
-
-        
-          <div class="col-lg-6">
-            <div class="card shadow-sm border-0">
-              <div class="card-body p-4">
-                <h5 class="fw-bold mb-3">Contact Us</h5>
-                <p class="small text-muted mb-4">
-                  Tell us about your practice so we can customize
-                  <strong>InstantAuth</strong> to your specific needs.
-                </p>
-
-                <form>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label class="form-label small">Full Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Enter your name"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label small">Your Role</label>
-                      <select class="form-select">
-                        <option>Select role</option>
-                        <option>Doctor</option>
-                        <option>Admin</option>
-                        <option>Staff</option>
-                      </select>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label small"
-                        >Practice/Organization Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Organization name"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label small">Phone Number</label>
-                      <input type="tel" class="form-control" placeholder="+1" />
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label small">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="email@example.com"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label small">Practice Size</label>
-                      <select class="form-select">
-                        <option>Small (1-10)</option>
-                        <option>Medium (11-50)</option>
-                        <option>Large (50+)</option>
-                      </select>
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label small">Current EMR System</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="e.g., Epic, Cerner, Allscripts"
-                      />
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label small"
-                        >Current Prior Authorization Challenges
-                        (Optional)</label
-                      >
-                      <textarea
-                        rows="3"
-                        class="form-control"
-                        placeholder="Tell us about your current challenges..."
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <div class="mt-4">
-                    <button type="submit" class="btn btn-free-trial w-100">
-                      Submit
-                    </button>
-                    <p class="small text-muted text-center mt-2 mb-0">
-                      By submitting this form, you agree to our
-                      <a href="#">Privacy Policy</a> and
-                      <a href="#">Terms of Service</a>.
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+      <!-- RIGHT: HubSpot Form -->
+      <div class="col-lg-6 col-md-12">
+        <div class="contact-form-container">
+          <script src="https://js-na2.hsforms.net/forms/embed/244019063.js" defer></script>
+          <div class="hs-form-frame" 
+               data-region="na2" 
+               data-form-id="c01b1f3e-d9a4-4062-8c99-c82de3c8734a" 
+               data-portal-id="244019063"></div>
+          <div id="hubspot-form"></div>
         </div>
       </div>
-    </section> -->
+      
+    </div>
+  </div>
+</section>
+
+
+
+<!--right hubspot form--> 
+<!-- <div class="contact"> <div class="container">
+   <div class="row"> <div class="col-md-6"></div>
+   <div class="col-md-6"> <script src="https://js-na2.hsforms.net/forms/embed/244019063.js" defer> 
+
+   </script> <div class="hs-form-frame" data-region="na2" data-form-id="c01b1f3e-d9a4-4062-8c99-c82de3c8734a" data-portal-id="244019063"></div>
+    <div id="hubspot-form"></div> </div> </div> </div> </div>
+ -->
+
+
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
@@ -615,7 +476,6 @@
           <ul class="contact-list">
             <li>
               <i class="ph ph-envelope-simple"></i>
-              <!-- <a href="mailto:info@instantauth.io" target="_blank">info@instantauth.io</a> -->
               <span href="mailto:info@instantauth.io" target="_blank">info@instantauth.io</span>
             </li>
             <li>
@@ -665,6 +525,10 @@
       } catch (e) { }
     })();
   </script>
+
+
+
+ 
 </body>
 
 </html>
