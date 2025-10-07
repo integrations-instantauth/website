@@ -44,6 +44,15 @@
         const lightSrc = img.getAttribute('data-light');
         img.src = theme === 'dark' ? darkSrc : lightSrc;
       });
+
+      // Carousel logos
+      document.querySelectorAll('.logo-track .carousel-logo').forEach(img => {
+        const darkSrc = img.getAttribute('data-dark');
+        const lightSrc = img.getAttribute('data-light');
+        if (darkSrc && lightSrc) {
+          img.src = theme === 'dark' ? darkSrc : lightSrc;
+        }
+      });
   
     }
   
