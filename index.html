@@ -26,7 +26,7 @@
         <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto main-nav">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#">How It Works</a>
               </li>
               <li class="nav-item">
@@ -38,7 +38,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
-              </li>
+              </li> -->
             </ul>
 
           </div>
@@ -47,8 +47,10 @@
         <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
           <div class="d-flex align-items-center gap-3">
             <div class="hero-buttons-nav">
-              <button class="btn-learn">Learn More</button>
-              <button class="btn-free-trial">Start Free Trial</button>
+              <!-- <button class="btn-learn">Learn More</button> -->
+           <button class="btn btn-free-trial" data-bs-toggle="modal" data-bs-target="#hubspotModal">
+  Start Free Trial
+</button>
             </div>
             <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
               <img id="toggleLogo" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16" width="16" />
@@ -95,7 +97,11 @@
 
       <div class="mt-4 d-flex flex-column gap-3">
         <button class="btn-learn w-100">Learn More</button>
-        <button class="btn-free-trial w-100">Start Free Trial</button>
+        <!-- <button class="btn-free-trial w-100"  data-bs-toggle="modal" data-bs-target="#hubspotModal">Start Free Trial</button> -->
+<button class="btn btn-free-trial" data-bs-toggle="modal" data-bs-target="#hubspotModal">
+  Start Free Trial
+</button>
+
         <div class="d-flex justify-content-center ">
           <button id="themeToggleMobile" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
             <img id="toggleLogoMobile" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16" width="16" />
@@ -133,7 +139,11 @@
         </p>
         <div class="hero-buttons">
           <a href="#how" class="btn btn-work">See How It Works</a>
-          <a href="#trial" class="btn btn-free-trial">Start Free Trial</a>
+        <button class="btn btn-free-trial" data-bs-toggle="modal" data-bs-target="#hubspotModal">
+  Start Free Trial
+</button>
+
+
         </div>
       </div>
       <div class="row pt-5">
@@ -528,7 +538,40 @@
 
 
 
- 
+
+
+
+<!-- HubSpot Form Modal -->
+<div class="modal fade" id="hubspotModal" tabindex="-1" aria-labelledby="hubspotModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" style="border-radius: 16px; background: var(--contact-form-bg); color: var(--contact-form-text);">
+      <div class="modal-header justify-content-center">
+        <img src="./src/img/logo-dark.svg"
+        alt="InstantAUT Logo"
+        id="modalLogo"
+        height="40"
+        class="img-fluid"/>
+    <button type="button" 
+          class="btn-close position-absolute end-0 me-3 mt-2" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="contact-form-container">
+          <script src="https://js-na2.hsforms.net/forms/embed/244019063.js" defer></script>
+          <div class="hs-form-frame"
+               data-region="na2"
+               data-form-id="c01b1f3e-d9a4-4062-8c99-c82de3c8734a"
+               data-portal-id="244019063"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 </body>
 
 </html>
