@@ -941,11 +941,11 @@ display: flex;
 /* === HUBSPOT FORM STYLING (RIGHT SIDE) === */
 
 .contact-form-container {
-  background: var(--contact-form-bg);
-  border-radius: var(--contact-form-radius);
-  padding-bottom: 20px;
+  /* background: var(--contact-form-bg);
+  border-radius: var(--contact-form-radius); */
+  /* padding-bottom: 20px; */
   box-shadow: 0 4px 19px rgba(0, 0, 0, 0.08);
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 
 .contact-form-container iframe,
