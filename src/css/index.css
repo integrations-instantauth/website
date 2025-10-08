@@ -96,12 +96,21 @@ html[data-theme="light"] {
   /* HOW IT WORKS SECTION */
   --how-bg: #f9fafb;
   --how-card-bg: #ffffff;
-  --how-card-border: #e5e7eb;
-  --how-card-border-style: solid;
+  --how-card-border: #ececf1;
+  --how-card-border-style: dashed;
   --how-card-text: #1f2937;
   --how-card-muted: #6b7280;
   --how-card-icon: #2563eb;
   --how-card-shadow: rgba(0, 0, 0, 0.05);
+
+  /* hook banner */
+  --hookbanner-bg: #ebf1f8;
+  --hookbanner-border: #a2c0dd;
+  --hookbanner-meta-text: #1d4064;
+  --hookbanner-heading-text: #2b2b2b;
+  --hookbanner-subtext: #505050;
+  --hookbanner-button-text: #f5f5f5;
+  --hookbanner-footnote-text: #818181;
 }
 
 /*=========================================================================================================================*/
@@ -197,6 +206,15 @@ html[data-theme="dark"] {
   --how-card-muted: #9fb3c6;
   --how-card-icon: #478cd1;
   --how-card-shadow: rgba(0, 0, 0, 0.4);
+
+  /* hook banner */
+  --hookbanner-bg: #111e30;
+  --hookbanner-border: #294f7b;
+  --hookbanner-meta-text: #d6edff;
+  --hookbanner-heading-text: #f5f5f5;
+  --hookbanner-subtext: #b5b5b9;
+  --hookbanner-button-text: #f5f5f5;
+  --hookbanner-footnote-text: #747478;
 }
 
 /* Theme Toggle Button */
@@ -652,8 +670,8 @@ body {
 }
 
 .how-card {
-  background: var(--how-bg);
-  border: 1.5px dashed #3c3c42;
+  background: var(--how-card-bg);
+  border: 2px var(--how-card-border-style) var(--how-card-border);
   border-radius: 12px;
   padding: 30px 20px;
   text-align: center;
@@ -692,19 +710,62 @@ body {
   padding: 50px 0px;
 }
 
-/* ---------------- PRIOR AUTH ---------------- */
-.prior-auth-section {
+/* ---------------- Hookbanner section*/
+.hook-banner {
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 56px;
+    border-radius: 24px;
+    margin: 40px auto;
+    max-width: var(--site-max-width);
+    color: var(--text-primary);
+    gap: 40px;
+  border: 1px solid var(--hookbanner-border);
+  background: var(--hookbanner-bg);
+  padding-right: 0px;
+}
+.hook-banner small {
+  color: var(--hookbanner-meta-text);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hook-banner h2 {
+  color: var(--hookbanner-heading-text);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.hook-banner p {
+  color: var(--hookbanner-subtext);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hook-banner .terms-note {
+  color: var(--hookbanner-footnote-text);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+
+
+
+.cta-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 56px;
-  border-radius: 24px;
-  border: 1px solid #294f7b;
-  background: var(--hero-fluid-container-bg);
-  margin: 40px auto;
-  max-width: var(--site-max-width);
-  color: var(--text-primary);
-  gap: 40px;
+  flex-direction: column;
+  align-items: flex-start; /* aligns both elements to the left */
+  gap: 4px; /* adds space between button and note */
+}
+
+.terms-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
 }
 
 .form-mockup {
@@ -1144,6 +1205,12 @@ body {
 @media (max-width: 999px) {
   .hook-banner img {
     display: none;
+  }
+  .hook-banner {
+     flex-direction: column;
+        padding: 20px 24px;
+        text-align: center;
+        /* place-items: anchor-center; */
   }
 }
 
