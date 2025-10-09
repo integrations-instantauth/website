@@ -64,6 +64,40 @@
       }
     });
 
+    // HubSpot Form Theme Switching
+    updateHubSpotForms(theme);
+
+  }
+
+  // Helper: Update HubSpot forms visibility based on theme
+  function updateHubSpotForms(theme) {
+    // Main contact form
+    const darkForm = document.querySelector('.hubspot-form-dark');
+    const lightForm = document.querySelector('.hubspot-form-light');
+    
+    if (darkForm && lightForm) {
+      if (theme === 'dark') {
+        darkForm.style.display = 'block';
+        lightForm.style.display = 'none';
+      } else {
+        darkForm.style.display = 'none';
+        lightForm.style.display = 'block';
+      }
+    }
+
+    // Modal form (if it exists)
+    const modalDarkForm = document.querySelector('#hubspotModal .hubspot-form-dark');
+    const modalLightForm = document.querySelector('#hubspotModal .hubspot-form-light');
+    
+    if (modalDarkForm && modalLightForm) {
+      if (theme === 'dark') {
+        modalDarkForm.style.display = 'block';
+        modalLightForm.style.display = 'none';
+      } else {
+        modalDarkForm.style.display = 'none';
+        modalLightForm.style.display = 'block';
+      }
+    }
   }
 
   // Set theme (attribute + localStorage + update UI)
