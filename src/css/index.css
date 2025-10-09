@@ -948,6 +948,34 @@ display: flex;
   /* border: 1px solid #ddd; */
 }
 
+/* HubSpot Form Theme Switching */
+.hubspot-form-dark,
+.hubspot-form-light {
+  display: none;
+}
+
+html[data-theme="dark"] .hubspot-form-dark {
+  display: block;
+}
+
+html[data-theme="light"] .hubspot-form-light {
+  display: block;
+}
+
+/* Modal form theme switching */
+#hubspotModal .hubspot-form-dark,
+#hubspotModal .hubspot-form-light {
+  display: none;
+}
+
+html[data-theme="dark"] #hubspotModal .hubspot-form-dark {
+  display: block;
+}
+
+html[data-theme="light"] #hubspotModal .hubspot-form-light {
+  display: block;
+}
+
 .contact-form-container iframe,
 .contact-form-container form {
   width: 620px;
