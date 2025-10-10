@@ -663,12 +663,12 @@ body {
   margin: 0 auto 48px;
   font-size: 1rem;
 }
-
+/* 
 .how-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
-}
+} */
 
 .how-card {
   background: var(--how-bg);
@@ -677,6 +677,7 @@ body {
   padding: 30px 20px;
   text-align: center;
   color: var(--how-card-text);
+  height:100%;
 }
 
 .how-card .icon,
