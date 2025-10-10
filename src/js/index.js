@@ -118,12 +118,12 @@
     updateUI(theme);
   }
 
-  // Initialize: read from attribute (we already set it early), fallback to localStorage or system
+  // Initialize: read from attribute (we already set it early), fallback to localStorage or default to dark
   function init() {
     const attr = html.getAttribute('data-theme');
     const saved = localStorage.getItem(THEME_KEY);
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = attr || saved || (prefersDark ? 'dark' : 'light');
+    // Default to dark theme, ignore system preference
+    const theme = attr || saved || 'dark';
     setTheme(theme);
 
     // Learn More smooth scroll

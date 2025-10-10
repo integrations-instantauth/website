@@ -828,7 +828,7 @@ display: flex;
 /* === CONTACT DEMO SECTION (LEFT ) === */
 .demo-contact-section {
   background: var(--demo-section-gradient);
-  padding: 104px 56px;
+  padding: 100px 0px;
 }
 
 .demo-contact-section .container {
