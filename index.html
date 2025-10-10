@@ -17,128 +17,109 @@
 
 <body>
   <!-- NAVBAR -->
-     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-            <img
-              id="siteLogo"
-              src="src/img/logo-dark.svg"
-              alt="InstantAuth Logo"
-              height="32"
-              class="me-2"
-            />
-          </a>
-          <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav mx-auto main-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">How It Works</a>
-                </li>
-                <!-- <li class="nav-item">
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+       <div>
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+          <img id="siteLogo" src="src/img/logo-dark.svg" alt="InstantAuth Logo" height="32" class="me-2" />
+        </a>
+       </div>
+        
+        <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto main-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#how">How It Works</a>
+              </li>
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
               </li> -->
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <!-- <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Pricing</a>
+              </li>
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
               </li> -->
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact Us</a>
-                </li>
-              </ul>
-            </div>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+            </ul>
           </div>
-          <!-- Desktop Navigation -->
-          <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
-            <div class="d-flex align-items-center gap-3">
-              <div class="hero-buttons-nav">
-                <a href="#how"
-                 class="btn-learn">Learn More</a>
-                <button
-                  class="btn btn-free-trial"
-                  data-bs-toggle="modal"
-                  data-bs-target="#hubspotModal"
-                >
-                  Contact Now
-                </button>
-              </div>
-              <button
-                id="themeToggle"
-                class="theme-toggle"
-                aria-pressed="false"
-                aria-label="Toggle theme"
-              >
-                <img
-                  id="toggleLogo"
-                  src="src/img/toggle-dark.svg"
-                  alt="Toggle Theme"
-                  height="16"
-                  width="16"
-                />
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
+          <div class="d-flex align-items-center gap-3">
+            <div class="hero-buttons-nav">
+              <a href="#how" class="btn-learn">Learn More</a>
+              <button class="btn btn-free-trial" data-bs-toggle="modal" data-bs-target="#hubspotModal">
+                Contact Now
               </button>
             </div>
+            <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+              <img id="toggleLogo" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16" width="16" />
+            </button>
           </div>
-          <!-- Mobile Toggle Button -->
-          <button
-            class="navbar-toggler d-lg-none logos"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
-            aria-label="Toggle navigation"
-          >
-            <!-- <span class="navbar-toggler-icon"></span> -->
-            <img
-              src="src/img/toggler-icon-dark.svg"
-              class="img-fluid"
-              data-light="src/img/toggler-icon-light.svg"
-              data-dark="src/img/toggler-icon-dark.svg"
-              class="img-fluid"
-            />
-          </button>
         </div>
-      </nav>
-    </header>
 
+          
+          <!-- Mobile Toggle Button -->
+          <div class="d-flex d-lg-none d-md-block  d-inline-block theme-toggle" >
+            <button id="themeToggleMobile" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+              <img id="toggleLogoMobile" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16" width="16" />
+            </button>
+          </div>
+          <button class="navbar-toggler d-lg-none logos" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <img src="src/img/toggler-icon-dark.svg" class="img-fluid" data-light="src/img/toggler-icon-light.svg"
+              data-dark="src/img/toggler-icon-dark.svg" class="img-fluid" />
+          </button>
+
+          
+ 
+      </div>
+    </nav>
+  </header>
+ 
   <!-- Mobile Offcanvas Navigation -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-      <h5 id="offcanvasRightLabel" class="offcanvas-title">Menu</h5>
+      <div>
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+          <img id="siteLogo" src="src/img/logo-dark.svg" alt="InstantAuth Logo" height="32" class="me-2" />
+        </a>
+       </div>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+
     <div class="offcanvas-body">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mx-auto main-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-dismiss="offcanvas">How It Works</a>
+          <a class="nav-link" href="#how">How It Works</a>
         </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-dismiss="offcanvas">Features</a>
+          <a class="nav-link" href="#contact">Pricing</a>
         </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-dismiss="offcanvas">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-dismiss="offcanvas">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-dismiss="offcanvas">Contact Us</a>
+          <a class="nav-link" href="#contact">Contact Us</a>
         </li>
       </ul>
 
       <div class="mt-4 d-flex flex-column gap-3">
-        <a href="#how" class="btn-learn w-100"  >Learn More</a>
+        <a href="#how" class="btn-learn w-100">Learn More</a>
         <!-- <button class="btn-free-trial w-100"  data-bs-toggle="modal" data-bs-target="#hubspotModal">Start Free Trial</button> -->
         <button class="btn btn-free-trial" data-bs-toggle="modal" data-bs-target="#hubspotModal">
           Contact Now
         </button>
 
-        <div class="d-flex  ">
-          <button id="themeToggleMobile" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
-            <img id="toggleLogoMobile" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16" width="16" />
-          </button>
-        </div>
+
       </div>
     </div>
   </div>
@@ -211,56 +192,65 @@
 
   <!-- how it sections-->
   <section class="how-section" id="how">
-    <h2>How InstantAuth Works</h2>
-    <p class="subtitle">
-      InstantAUTH modernized patient care from the first phone call to the
-      office.
-    </p>
-    <div class="how-cards container">
-      <!-- Card 1 -->
-      <div class="how-card">
-        <img src="./src/img/file-text.svg" alt="Agentic Intake" class="custom-icon" />
+    <div class="container">
+      <h2>How InstantAuth Works</h2>
+      <p class="subtitle">
+        InstantAUTH modernized patient care from the first phone call to the
+        office.
+      </p>
 
-        <!-- <span class="time"><i class="ph ph-clock"></i> &lt; 1 min</span> -->
-        <h3>Agentic Intake</h3>
-        <p>
-          During intake or provider encounter, InstantAUTH immediately determines whether prior authorization is
-          necessary.
-        </p>
-      </div>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class=" col-md-6 col-lg-3 mb-4">
+          <div class="how-card">
+            <img src="./src/img/file-text.svg" alt="Agentic Intake" class="custom-icon" />
+            <h3>Agentic Intake</h3>
+            <p>
+              During intake or provider encounter, InstantAUTH immediately determines whether prior authorization is
+              necessary.
+            </p>
+          </div>
+        </div>
 
-      <!-- Card 2 (custom icon from Figma) -->
-      <div class="how-card">
-        <img src="./src/img/star-icon.svg" alt="Intelligent Analysis" class="custom-icon" />
-        <!-- <span class="time"><i class="ph ph-clock"></i> 2 min</span> -->
-        <h3>Intelligent Analysis</h3>
-        <p>
-          If necessary, InstantAUTH automatically completes payor portal questions, even drawing necessary documentation
-          from the EMR, and obtains approval.
-        </p>
-      </div>
+        <!-- Card 2 -->
+        <div class=" col-md-6 col-lg-3 mb-4">
+          <div class="how-card">
+            <img src="./src/img/star-icon.svg" alt="Intelligent Analysis" class="custom-icon" />
+            <h3>Intelligent Analysis</h3>
+            <p>
+              If necessary, InstantAUTH automatically completes payor portal questions, even drawing necessary
+              documentation
+              from the EMR, and obtains approval.
+            </p>
+          </div>
+        </div>
 
-      <!-- Card 3 -->
-      <div class="how-card">
-        <img src="./src/img/check-circle.svg" alt="Automated Prior Authorization" class="custom-icon" />
-        <!-- <span class="time"><i class="ph ph-clock"></i> 5 min</span> -->
-        <h3>Automated Prior Authorization</h3>
-        <p>
-          If certain prior treatments are required for PA, InstantAUTH documents accordingly or notifies provider of
-          necessary steps based on up to date payor guidelines.
-        </p>
-      </div>
+        <!-- Card 3 -->
+        <div class=" col-md-6 col-lg-3 mb-4">
+          <div class="how-card">
+            <img src="./src/img/check-circle.svg" alt="Automated Prior Authorization" class="custom-icon" />
+            <h3>Automated Prior Authorization</h3>
+            <p>
+              If certain prior treatments are required for PA, InstantAUTH documents accordingly or notifies provider of
+              necessary steps based on up to date payor guidelines.
+            </p>
+          </div>
+        </div>
 
-      <!-- Card 4 -->
-      <div class="how-card">
-        <img src="./src/img/money-wavy.svg" alt="Instant Authorization" class="custom-icon" />
-        <!-- <span class="time"><i class="ph ph-clock"></i> 15 min</span> -->
-        <h3>Reduced Denial, <br>Automated Appeals
-          <p>
-            Free staff to focus on patient care, reduce burnout and turnover.
+        <!-- Card 4 -->
+        <div class=" col-md-6 col-lg-3 mb-4">
+          <div class="how-card">
+            <img src="./src/img/money-wavy.svg" alt="Instant Authorization" class="custom-icon" />
+            <h3>Reduced Denial, <br>Automated Appeals</h3>
+            <p>
+              Free staff to focus on patient care, reduce burnout and turnover.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
 
   <!-- END how it sections-->
 
@@ -278,7 +268,10 @@
             needed, it does it for you too.
           </p>
           <div class="cta-wrapper">
-            <a href="#" class="btn btn-free-trial">Contact Now</a>
+            <!-- <a href="#" class="btn btn-free-trial">Contact Now</a> -->
+            <button class="btn btn-free-trial" data-bs-toggle="modal" data-bs-target="#hubspotModal">
+              Contact Now
+            </button>
             <small class="terms-note">*T&C apply</small>
           </div>
         </div>
@@ -390,7 +383,7 @@
   </div>
   </div>
   </section>
-  <section class="demo-contact-section py-5">
+  <section class="demo-contact-section" id="contact">
     <div class="container">
       <div class="row align-items-start justify-content-between g-5">
 
@@ -433,13 +426,12 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
-
           <!-- RIGHT: HubSpot Form -->
           <div class="contact-form-container">
             <div class="hubspot-form-dark">
               <script src="https://js-na2.hsforms.net/forms/embed/243989464.js" defer></script>
-              <div class="hs-form-frame" data-region="na2" data-form-id="571beddd-e265-40dc-b7d7-f10fc77c0bcf"
-                data-portal-id="243989464"></div>
+              <div class="hs-form-frame" data-region="na2" data-form-id="29e1dc44-c934-47dc-8050-12cd3278636e" data-portal-id="243989464"></div>
+              
               <div id="hubspot-form"></div>
             </div>
             <div class="hubspot-form-light">
@@ -480,7 +472,10 @@
             paperwork.
           </p>
           <div class="footer-social">
-            <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://www.linkedin.com/in/sanjay-menon-m-d-008b52" target="_blank"><i
+                class="ph ph-linkedin-logo"></i></a>
+            <!-- <a href="#"><i class="ph ph-x-logo"></i></a>
+            <a href="#"><i class="ph ph-facebook-logo"></i></a> -->
             <!-- <a href="#"><i class="ph ph-x-logo"></i></a>
             <a href="#"><i class="ph ph-facebook-logo"></i></a> -->
           </div>
@@ -490,8 +485,8 @@
         <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
           <h5 class="footer-heading">Product</h5>
           <ul class="list-unstyled">
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Pricing Beta</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#contact">Pricing <span style="font: size 10px;">BETA</span></a></li>
             <!-- <li><a href="#">Pricing</a></li>    simply offer a free Beta trial for now. That could help us to get practice data and start working out problems.-->
           </ul>
         </div>
@@ -499,12 +494,12 @@
         <!-- Company -->
         <!-- <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
           <h5 class="footer-heading">Company</h5>
-          <ul class="list-unstyled"> -->
-            <!-- <li><a href="#">                      Our Success</a></li> omit this-->
-            <!-- <li><a href="#">Blogs</a></li>
+          <ul class="list-unstyled">
+            <li><a href="#">Our Success</a></li> 
+            <li><a href="#">Blogs</a></li>
             <li><a href="#">Events</a></li>
-            <li><a href="#">Resources</a></li> -->
-            <!-- <li><a href="#">About Us</a></li>       
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">About Us</a></li> 
           </ul>
         </div> -->
 
@@ -512,13 +507,13 @@
         <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
           <h5 class="footer-heading">Support</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
             <li><a href="#">Help Center</a></li>
           </ul>
         </div>
 
         <!-- Contact Us -->
-        <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
           <h5 class="footer-heading">Contact Us</h5>
           <ul class="contact-list">
             <li>
@@ -564,10 +559,8 @@
     (function () {
       try {
         const saved = localStorage.getItem("theme");
-        const prefersDark =
-          window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const theme = saved || (prefersDark ? "dark" : "light");
+        // Default to dark theme, ignore system preference
+        const theme = saved || "dark";
         document.documentElement.setAttribute("data-theme", theme);
       } catch (e) { }
     })();
