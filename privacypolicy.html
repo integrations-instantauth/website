@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./src/img/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="./src/img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./src/img/favicon.png" />
+    <title>InstantAuth</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+      rel="stylesheet"
+    />
+    <link href="src/css/index.css" rel="stylesheet" />
+    <link href="src/css/privacypolicy.css" rel="stylesheet"/>
+
+   
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <img
+              id="siteLogo"
+              src="src/img/logo-dark.svg"
+              alt="InstantAuth Logo"
+              height="32"
+              class="me-2"
+            />
+          </a>
+          <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto main-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">How It Works</a>
+                </li>
+                <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <!-- <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Desktop Navigation -->
+          <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-3">
+              <div class="hero-buttons-nav">
+                <button class="btn-learn">Learn More</button>
+                <button
+                  class="btn btn-free-trial"
+                  data-bs-toggle="modal"
+                  data-bs-target="#hubspotModal"
+                >
+                  Contact Now
+                </button>
+              </div>
+              <button
+                id="themeToggle"
+                class="theme-toggle"
+                aria-pressed="false"
+                aria-label="Toggle theme"
+              >
+                <img
+                  id="toggleLogo"
+                  src="src/img/toggle-dark.svg"
+                  alt="Toggle Theme"
+                  height="16"
+                  width="16"
+                />
+              </button>
+            </div>
+          </div>
+          <!-- Mobile Toggle Button -->
+          <button
+            class="navbar-toggler d-lg-none logos"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+            aria-label="Toggle navigation"
+          >
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <img
+              src="src/img/toggler-icon-dark.svg"
+              class="img-fluid"
+              data-light="src/img/toggler-icon-light.svg"
+              data-dark="src/img/toggler-icon-dark.svg"
+              class="img-fluid"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Offcanvas Navigation -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="offcanvas-title">Menu</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-dismiss="offcanvas"
+              >How It Works</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-dismiss="offcanvas"
+              >Features</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-dismiss="offcanvas">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-dismiss="offcanvas"
+              >About Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-dismiss="offcanvas"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <div class="mt-4 d-flex flex-column gap-3">
+          <button class="btn-learn w-100">Learn More</button>
+          <!-- <button class="btn-free-trial w-100"  data-bs-toggle="modal" data-bs-target="#hubspotModal">Start Free Trial</button> -->
+          <button
+            class="btn btn-free-trial"
+            data-bs-toggle="modal"
+            data-bs-target="#hubspotModal"
+          >
+            Contact Now
+          </button>
+
+          <div class="d-flex justify-content-center">
+            <button
+              id="themeToggleMobile"
+              class="theme-toggle"
+              aria-pressed="false"
+              aria-label="Toggle theme"
+            >
+              <img
+                id="toggleLogoMobile"
+                src="src/img/toggle-dark.svg"
+                alt="Toggle Theme"
+                height="16"
+                width="16"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy Policy Section -->
+    <section class="privacy-policy-section py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12">
+            <div class="privacy-policy-content">
+              <!-- Heading -->
+              <h2 class="privacy-title mb-4">Privacy Policy</h2>
+
+              <!-- Overview -->
+              <div class="privacy-block mb-4">
+                <h5 class="privacy-subtitle">Overview</h5>
+                <p>
+                  At <strong>InstantAUTH</strong>, your privacy is our priority.
+                  This Privacy Policy explains how we gather, utilize, and
+                  safeguard your personal data to ensure a seamless experience
+                  on our platform.
+                </p>
+              </div>
+
+              <!-- Data We Gather -->
+              <div class="privacy-block mb-4">
+                <h5 class="privacy-subtitle">Data We Gather</h5>
+                <ul>
+                  <li>
+                    <strong>Personal Information:</strong> Includes your name,
+                    email, and phone number.
+                  </li>
+                  <li>
+                    <strong>Usage Data:</strong> Insights into how you interact
+                    with our platform.
+                  </li>
+                  <li>
+                    <strong>Cookies and Tracking:</strong> Information about
+                    your browsing habits.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Purpose of Data Usage -->
+              <div class="privacy-block mb-4">
+                <h5 class="privacy-subtitle">Purpose of Data Usage</h5>
+                <ul>
+                  <li>Enhance our services.</li>
+                  <li>Communicate with you, including promotional messages.</li>
+                  <li>Personalize your experience.</li>
+                  <li>Fulfill legal requirements.</li>
+                </ul>
+              </div>
+
+              <!-- Disclosing Your Information -->
+              <div class="privacy-block mb-4">
+                <h5 class="privacy-subtitle">Disclosing Your Information</h5>
+                <ul>
+                  <li>To service providers aiding our operations.</li>
+                  <li>
+                    To third parties when legally necessary or to safeguard our
+                    interests.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Your Rights and Options -->
+              <div class="privacy-block mb-4">
+                <h5 class="privacy-subtitle">Your Rights and Options</h5>
+                <ul>
+                  <li>Access, update, or delete your information.</li>
+                  <li>Opt-out of marketing messages.</li>
+                  <li>Adjust cookie settings via your browser.</li>
+                </ul>
+              </div>
+
+              <!-- Protecting Your Information -->
+              <div class="privacy-block mb-4">
+                <h5 class="privacy-subtitle">Protecting Your Information</h5>
+                <p>
+                  We implement industry-standard security practices to safeguard
+                  your data. However, keep in mind that no online transmission
+                  or storage method is completely secure.
+                </p>
+              </div>
+
+              <!-- Children's Privacy Policy -->
+              <div class="privacy-block mb-4">
+                <h5 class="privacy-subtitle">Children’s Privacy Policy</h5>
+                <p>
+                  Our services are not intended for those under 13 years old. We
+                  do not intentionally collect personal data from children.
+                </p>
+              </div>
+
+              <!-- Updates to Policy -->
+              <div class="privacy-block mb-4">
+                <h5 class="privacy-subtitle">Updates to This Privacy Policy</h5>
+                <p>
+                  We may revise this policy from time to time. Please check back
+                  for any changes.
+                </p>
+              </div>
+
+              <!-- Contact Info -->
+              <div class="privacy-block">
+                <h5 class="privacy-subtitle">Get in Touch</h5>
+                <p>
+                  For inquiries regarding this Privacy Policy, please reach out
+                  to us at
+                  <a href="mailto:info@instantauth.io" class="privacy-link"
+                    >info@instantauth.io</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row footer-content">
+          <!-- Logo + Description -->
+          <div class="col-lg-4 col-md-12 col-sm-12 mb-5 footer-brand">
+            <img
+              src="src/img/logo-dark.svg"
+              alt="InstantAuth"
+              class="footer-logo mb-3 img-fluid"
+            />
+            <p class="footer-text">
+              Transforming healthcare through intelligent prior authorization
+              automation. Helping practices focus on patient care instead of
+              paperwork.
+            </p>
+            <div class="footer-social">
+              <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+              <!-- <a href="#"><i class="ph ph-x-logo"></i></a>
+            <a href="#"><i class="ph ph-facebook-logo"></i></a> -->
+            </div>
+          </div>
+
+          <!-- Product -->
+          <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+            <h5 class="footer-heading">Product</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">How It Works</a></li>
+              <li><a href="#">Pricing Beta</a></li>
+              <!-- <li><a href="#">Pricing</a></li>    simply offer a free Beta trial for now. That could help us to get practice data and start working out problems.-->
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <!-- <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+          <h5 class="footer-heading">Company</h5>
+          <ul class="list-unstyled"> -->
+          <!-- <li><a href="#">                      Our Success</a></li> omit this-->
+          <!-- <li><a href="#">Blogs</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Resources</a></li> -->
+          <!-- <li><a href="#">About Us</a></li>       
+          </ul>
+        </div> -->
+
+          <!-- Support -->
+          <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+            <h5 class="footer-heading">Support</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Help Center</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Us -->
+          <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+            <h5 class="footer-heading">Contact Us</h5>
+            <ul class="contact-list">
+              <li>
+                <i class="ph ph-envelope-simple"></i>
+                <span href="mailto:info@instantauth.io" target="_blank"
+                  >info@instantauth.io</span
+                >
+              </li>
+              <li>
+                <i class="ph ph-phone"></i>
+                <span>(555) 123-44567</span>
+              </li>
+              <li>
+                <i class="ph ph-map-pin"></i>
+                <span>3241 Bayshore Blvd. NE, Saint Petersburg, FL, 33703</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div
+          class="footer-bottom d-flex justify-content-between align-items-center pt-4 mt-4"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7 col-md-12 col-sm-12">
+                <p class="mb-0">© 2025 InstantAuth. All rights reserved.</p>
+              </div>
+              <div class="col-lg-5 col-md-12 col-sm-12">
+                <div class="footer-links">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Use</a>
+                  <a href="#">Cookie Policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Theme script file -->
+    <script src="src/js/index.js"></script>
+    <script>
+      (function () {
+        try {
+          const saved = localStorage.getItem("theme");
+          const prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = saved || (prefersDark ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- HubSpot Form Modal -->
+    <div
+      class="modal fade"
+      id="hubspotModal"
+      tabindex="-1"
+      aria-labelledby="hubspotModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div
+          class="modal-content"
+          style="
+            border-radius: 16px;
+            background: var(--contact-form-bg);
+            color: var(--contact-form-text);
+          "
+        >
+          <div class="modal-header justify-content-center">
+            <img
+              src="./src/img/logo-dark.svg"
+              alt="InstantAUT Logo"
+              id="modalLogo"
+              height="40"
+              class="img-fluid"
+            />
+            <button
+              type="button"
+              class="btn-close position-absolute end-0 me-3 mt-2"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="contact-form-container">
+              <div class="hubspot-form-dark">
+                <script
+                  src="https://js.hsforms.net/forms/embed/v2.js"
+                  defer
+                ></script>
+                <div
+                  class="hs-form-frame"
+                  data-region="na2"
+                  data-form-id="571beddd-e265-40dc-b7d7-f10fc77c0bcf"
+                  data-portal-id="243989464"
+                ></div>
+                <div id="hubspot-form-dark"></div>
+              </div>
+              <div class="hubspot-form-light">
+                <script
+                  src="https://js.hsforms.net/forms/embed/v2.js"
+                  defer
+                ></script>
+                <div
+                  class="hs-form-frame"
+                  data-region="na2"
+                  data-form-id="771260a0-27aa-4184-a304-c86d9305689d"
+                  data-portal-id="243989464"
+                ></div>
+                <div id="hubspot-form-light"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

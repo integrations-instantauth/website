@@ -17,58 +17,90 @@
 
 <body>
   <!-- NAVBAR -->
-  <header>
-    <nav class="navbar navbar-expand-lg ">
-      <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-          <img id="siteLogo" src="src/img/logo-dark.svg" alt="InstantAuth Logo" height="32" class="me-2" />
-        </a>
-        <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto main-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">How It Works</a>
-              </li>
-              <!-- <li class="nav-item">
+     <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <img
+              id="siteLogo"
+              src="src/img/logo-dark.svg"
+              alt="InstantAuth Logo"
+              height="32"
+              class="me-2"
+            />
+          </a>
+          <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto main-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">How It Works</a>
+                </li>
+                <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
               </li> -->
-              <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-              <!-- <li class="nav-item">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <!-- <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
               </li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-            </ul>
-
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <!-- Desktop Navigation -->
-        <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
-          <div class="d-flex align-items-center gap-3">
-            <div class="hero-buttons-nav">
-              <button class="btn-learn">Learn More</button>
-              <button class="btn btn-free-trial" data-bs-toggle="modal" data-bs-target="#hubspotModal">
-                Contact Now
+          <!-- Desktop Navigation -->
+          <div class="d-none d-lg-none d-xl-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-3">
+              <div class="hero-buttons-nav">
+                <a href="#how"
+                 class="btn-learn">Learn More</a>
+                <button
+                  class="btn btn-free-trial"
+                  data-bs-toggle="modal"
+                  data-bs-target="#hubspotModal"
+                >
+                  Contact Now
+                </button>
+              </div>
+              <button
+                id="themeToggle"
+                class="theme-toggle"
+                aria-pressed="false"
+                aria-label="Toggle theme"
+              >
+                <img
+                  id="toggleLogo"
+                  src="src/img/toggle-dark.svg"
+                  alt="Toggle Theme"
+                  height="16"
+                  width="16"
+                />
               </button>
             </div>
-            <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
-              <img id="toggleLogo" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16" width="16" />
-            </button>
           </div>
+          <!-- Mobile Toggle Button -->
+          <button
+            class="navbar-toggler d-lg-none logos"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+            aria-label="Toggle navigation"
+          >
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <img
+              src="src/img/toggler-icon-dark.svg"
+              class="img-fluid"
+              data-light="src/img/toggler-icon-light.svg"
+              data-dark="src/img/toggler-icon-dark.svg"
+              class="img-fluid"
+            />
+          </button>
         </div>
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler d-lg-none logos" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Toggle navigation">
-          <!-- <span class="navbar-toggler-icon"></span> -->
-          <img src="src/img/toggler-icon-dark.svg" class="img-fluid" data-light="src/img/toggler-icon-light.svg"
-            data-dark="src/img/toggler-icon-dark.svg" class="img-fluid" />
-
-        </button>
-
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
   <!-- Mobile Offcanvas Navigation -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -96,13 +128,13 @@
       </ul>
 
       <div class="mt-4 d-flex flex-column gap-3">
-        <button class="btn-learn w-100">Learn More</button>
+        <a href="#how" class="btn-learn w-100"  >Learn More</a>
         <!-- <button class="btn-free-trial w-100"  data-bs-toggle="modal" data-bs-target="#hubspotModal">Start Free Trial</button> -->
         <button class="btn btn-free-trial" data-bs-toggle="modal" data-bs-target="#hubspotModal">
           Contact Now
         </button>
 
-        <div class="d-flex justify-content-center ">
+        <div class="d-flex  ">
           <button id="themeToggleMobile" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
             <img id="toggleLogoMobile" src="src/img/toggle-dark.svg" alt="Toggle Theme" height="16" width="16" />
           </button>
@@ -178,7 +210,7 @@
   <!-- END HERO -->
 
   <!-- how it sections-->
-  <section class="how-section">
+  <section class="how-section" id="how">
     <h2>How InstantAuth Works</h2>
     <p class="subtitle">
       InstantAUTH modernized patient care from the first phone call to the
@@ -541,17 +573,12 @@
     })();
   </script>
 
-
-
-
-
-
   <!-- HubSpot Form Modal -->
   <div class="modal fade" id="hubspotModal" tabindex="-1" aria-labelledby="hubspotModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content"
         style="border-radius: 16px; background: var(--contact-form-bg); color: var(--contact-form-text);">
-        <div class="modal-header justify-content-center">
+        <div class="modal-header ">
           <img src="./src/img/logo-dark.svg" alt="InstantAUT Logo" id="modalLogo" height="40" class="img-fluid" />
           <button type="button" class="btn-close position-absolute end-0 me-3 mt-2" data-bs-dismiss="modal"
             aria-label="Close"></button>
@@ -575,9 +602,6 @@
       </div>
     </div>
   </div>
-
-
-
 
 </body>
 

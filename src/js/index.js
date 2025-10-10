@@ -64,6 +64,16 @@
       }
     });
 
+
+      const thankyouImg = document.querySelector('.thankyou-icon');
+  if (thankyouImg) {
+    const darkSrc = thankyouImg.getAttribute('data-dark');
+    const lightSrc = thankyouImg.getAttribute('data-light');
+    if (darkSrc && lightSrc) {
+      thankyouImg.src = theme === 'dark' ? darkSrc : lightSrc;
+    }
+  }
+
     // HubSpot Form Theme Switching
     updateHubSpotForms(theme);
 
